@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Microsoft Clarity Analytics & Prospect Intelligence -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yi9wab3vxv");
+    </script>
+    <script src="tracking.js"></script>
+    <!-- Favicon & Browser Tab Icons -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <title>Executive Decision Portal | Volve Media &times; Credit Builder Flow</title>
+    <meta name="description" content="Commercial evaluation and post-meeting decision portal for automotive dealership executives.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Volve Media Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            card: 'rgba(255, 255, 255, 0.03)',
+                            cardHover: 'rgba(255, 255, 255, 0.06)',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            pink: '#ec4899',
+                            purple: '#9333ea',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #e2e8f0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(236, 72, 153, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px -10px rgba(236, 72, 153, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+        }
+
+        .ambient-blob {
+            position: fixed;
+            border-radius: 9999px;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        .glass-header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(10, 10, 15, 0.60) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-pink-500/30 selection:text-pink-200">
+
+    <!-- Ambient Glow Effects -->
+    <div class="ambient-blob w-96 h-96 bg-pink-600 top-0 left-10"></div>
+    <div class="ambient-blob w-96 h-96 bg-purple-600 top-1/3 right-10"></div>
+
+    <!-- MAIN CO-BRANDED NAVIGATION WITH SINGLE CONSOLIDATED MENU -->
+    <header class="relative z-30 glass-header sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 flex justify-between items-center">
+            <!-- Volve Media & Dealership Co-Branding -->
+            <div class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-2 group">
+                    <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                         alt="Volve Media Logo" 
+                         class="h-8 w-auto rounded-lg shadow-sm" 
+                         loading="lazy">
+                    <div class="flex flex-col">
+                        <span class="text-base font-extrabold text-white tracking-tight font-heading leading-tight">
+                            Volve<span class="text-gradient">Media</span>
+                        </span>
+                        <span class="text-[9px] text-gray-400 font-semibold tracking-wider uppercase">Credit Builder Flow</span>
+                    </div>
+                </a>
+                <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
+                <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
+                    <i data-lucide="building-2" class="w-3.5 h-3.5 text-pink-400"></i>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Volkswagen Auto Group</span>
+                </div>
+            </div>
+
+            <!-- Single Consolidated Menu Dropdown Toggle -->
+            <div class="relative">
+                <button id="menu-toggle-btn" type="button" class="glass px-3.5 py-2 rounded-xl text-xs font-semibold text-gray-200 hover:text-white flex items-center gap-2 border border-white/10 hover:border-pink-500/30 transition-all focus:outline-none">
+                    <i data-lucide="menu" class="w-4 h-4 text-pink-400"></i>
+                    <span>Menu</span>
+                    <i data-lucide="chevron-down" id="menu-chevron" class="w-3.5 h-3.5 text-gray-400 transition-transform"></i>
+                </button>
+
+                <!-- Consolidated Menu Dropdown Panel -->
+                <div id="menu-dropdown" class="hidden absolute right-0 mt-2 w-72 sm:w-80 bg-brand-dark/95 border border-white/10 rounded-2xl shadow-2xl p-4 backdrop-blur-xl z-50 space-y-3">
+                    <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
+                        Portal Navigation
+                    </div>
+
+                    <!-- Ordered Navigation Links (1 to 6) -->
+                    <div class="space-y-1 text-xs">
+                        <a href="03-scope-of-work.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <span class="flex items-center gap-2.5">
+                                <span class="w-5 h-5 rounded bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-[10px]">1</span> Scope of Work
+                            </span>
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                        </a>
+                        <a href="02-solution-options.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <span class="flex items-center gap-2.5">
+                                <span class="w-5 h-5 rounded bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-[10px]">2</span> The Solution
+                            </span>
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                        </a>
+                        <a href="case-study.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <span class="flex items-center gap-2.5">
+                                <span class="w-5 h-5 rounded bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-[10px]">3</span> Case Studies &amp; Timelines
+                            </span>
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                        </a>
+                        <a href="04-risk-compliance.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <span class="flex items-center gap-2.5">
+                                <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-[10px]">4</span> Risk &amp; Protection
+                            </span>
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                        </a>
+                        <a href="01-commercial-roi.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <span class="flex items-center gap-2.5">
+                                <span class="w-5 h-5 rounded bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center text-[10px]">5</span> Revenue &amp; ROI
+                            </span>
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                        </a>
+                        <a href="05-recommendation-pilot.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <span class="flex items-center gap-2.5">
+                                <span class="w-5 h-5 rounded bg-pink-500/30 text-pink-300 font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
+                            </span>
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                        </a>
+                    </div>
+
+                    <!-- Consolidated Primary CTA inside the Menu -->
+                    <div class="pt-2 border-t border-white/10">
+                        <a href="05-recommendation-pilot.html" class="btn-gradient text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 w-full text-center shadow-md">
+                            <span>Start Recovering Declined Customers</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN EXECUTIVE PORTAL CONTENT -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12 space-y-10">
+
+        <!-- EXECUTIVE THANK YOU & GREETING -->
+        <section class="space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-xs font-medium text-gray-300">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>Briefing Completed &bull; Your Decision Pack</span>
+            </div>
+
+            <div class="space-y-3 max-w-3xl">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white tracking-tight leading-tight">
+                    Thank You For Your Time, <br/>
+                    <span id="hero-contact-name" class="text-gradient">Johan &amp; The Volkswagen Team</span>.
+                </h1>
+                <p class="text-sm sm:text-base text-gray-300 font-normal leading-relaxed">
+                    Following our briefing regarding <span id="hero-dealership-name" class="text-white font-semibold">Volkswagen Auto Group</span>'s finance declines across WesBank, MFC, Absa, and Standard Bank, this portal provides the commercial and operational review pack to activate CBF across your floor.
+                </p>
+            </div>
+
+            <!-- Metadata Quick Pill Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                <div class="glass p-3 rounded-xl">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Dealership</span>
+                    <span id="meta-dealership" class="text-xs sm:text-sm font-bold text-white mt-0.5 block truncate">Volkswagen Auto Group</span>
+                </div>
+                <div class="glass p-3 rounded-xl">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Executive Contact</span>
+                    <span id="meta-contact" class="text-xs sm:text-sm font-bold text-white mt-0.5 block truncate">Johan Van Der Merwe</span>
+                </div>
+                <div class="glass p-3 rounded-xl">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Monthly Declines</span>
+                    <span id="meta-declines" class="text-xs sm:text-sm font-bold text-pink-400 mt-0.5 block">~25 Leads / Month</span>
+                </div>
+                <div class="glass p-3 rounded-xl">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Status</span>
+                    <span class="text-xs sm:text-sm font-bold text-emerald-400 mt-0.5 block">Ready When You Are</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- WRITTEN MEETING RECAP -->
+        <section class="glass-card rounded-2xl p-6 sm:p-7 border-l-4 border-l-pink-500 relative overflow-hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-5 pb-4 border-b border-white/10">
+                <div class="flex items-center gap-2 text-pink-400 text-xs uppercase font-bold tracking-wider">
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                    <span>Discussion Summary</span>
+                </div>
+                <div class="text-rose-400 text-xs font-semibold flex items-center gap-1.5">
+                    <i data-lucide="trending-down" class="w-3.5 h-3.5"></i>
+                    <span id="lost-declines-est">Estimated R375,000 – R500,000 / mo Currently Lost to Declines</span>
+                </div>
+            </div>
+
+            <!-- 3 Concise Recap Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm">
+                <!-- Point 1 -->
+                <div class="space-y-1.5">
+                    <div class="flex items-center gap-2 text-white font-semibold text-xs sm:text-sm">
+                        <span class="w-5 h-5 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center text-[11px] font-bold">1</span>
+                        <span>The Opportunity</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-xs">
+                        Losing ~<strong class="text-gray-200">25 motivated buyers monthly</strong> to credit declines (worth R15k–R20k gross per deal). These are currently written off with no structured follow-up.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="space-y-1.5">
+                    <div class="flex items-center gap-2 text-white font-semibold text-xs sm:text-sm">
+                        <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold">2</span>
+                        <span>Minimal Staff Involvement</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-xs">
+                        F&amp;I simply hands over a <strong class="text-gray-200">10-second referral link</strong>. All dispute filings, credit counseling, and rehabilitation are handled off-site.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="space-y-1.5">
+                    <div class="flex items-center gap-2 text-white font-semibold text-xs sm:text-sm">
+                        <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">3</span>
+                        <span>Pay On Results Only</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-xs">
+                        <strong class="text-gray-200">R0 monthly retainer.</strong> Contingency fee of <strong class="text-emerald-400">R6k flat (&lt;R130k) / 5% (&ge;R130k)</strong> paid strictly after a recovered deal is funded by the bank.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REORDERED DECISION NAVIGATION HUB (NUMBERED 1 TO 6) -->
+        <section id="decision-hub" class="space-y-6 pt-2">
+            <div>
+                <span class="text-xs uppercase font-bold tracking-widest text-pink-400 block mb-1">Decision Navigation Hub</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Select a Section to Review</h2>
+            </div>
+
+            <!-- Priority Grid with Clean Sequential Numbers (1-6) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- STEP 1: SCOPE OF WORK -->
+                <a href="03-scope-of-work.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <!-- Clean Number 1 Badge -->
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-extrabold font-heading text-base group-hover:scale-110 transition-all">
+                                1
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded">Scope</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-white group-hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                                Scope of Work
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400"></i>
+                            </h3>
+                            <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                                What we deliver, F&amp;I responsibilities, and operational boundaries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-blue-400 font-semibold">
+                        <span>Review Scope &amp; Roles</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- STEP 2: THE SOLUTION -->
+                <a href="02-solution-options.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <!-- Clean Number 2 Badge -->
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 font-extrabold font-heading text-base group-hover:scale-110 transition-all">
+                                2
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded">Solution</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-white group-hover:text-purple-300 transition-colors flex items-center gap-1.5">
+                                The Solution
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-purple-400"></i>
+                            </h3>
+                            <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                                3-step recovery process compared to in-house follow-up or doing nothing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-purple-400 font-semibold">
+                        <span>Compare Options</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- STEP 3: CASE STUDY & TIMELINES -->
+                <a href="case-study.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <!-- Clean Number 3 Badge -->
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-extrabold font-heading text-base group-hover:scale-110 transition-all">
+                                3
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded">Proof</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                                Case Study &amp; Timelines
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-amber-400"></i>
+                            </h3>
+                            <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                                30 to 180-day recovery timelines converting unfinanceable buyers into funded showroom deliveries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                        <span>View Delivery Audit</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- STEP 4: RISK & PROTECTION -->
+                <a href="04-risk-compliance.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <!-- Clean Number 4 Badge -->
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-extrabold font-heading text-base group-hover:scale-110 transition-all">
+                                4
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded">Protection</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+                                Risk &amp; Protection
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-emerald-400"></i>
+                            </h3>
+                            <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                                Customer consent protocols, data security, and dealership exclusivity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-emerald-400 font-semibold">
+                        <span>Inspect Protections</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- STEP 5: REVENUE & ROI -->
+                <a href="01-commercial-roi.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <!-- Clean Number 5 Badge -->
+                            <div class="w-10 h-10 rounded-xl bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-pink-400 font-extrabold font-heading text-base group-hover:scale-110 transition-all">
+                                5
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded">Financial</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-white group-hover:text-pink-300 transition-colors flex items-center gap-1.5">
+                                Revenue &amp; ROI
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-pink-400"></i>
+                            </h3>
+                            <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                                Quantified profit salvage based on your monthly vehicle decline volume.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-pink-400 font-semibold">
+                        <span>Review Calculations</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- STEP 6: AGREEMENT & ONBOARDING -->
+                <a href="05-recommendation-pilot.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative border-pink-500/30 bg-gradient-to-br from-pink-500/5 via-brand-dark to-purple-500/5">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <!-- Clean Number 6 Badge -->
+                            <div class="w-10 h-10 rounded-xl bg-pink-500/30 border border-pink-500/50 flex items-center justify-center text-pink-300 font-extrabold font-heading text-base group-hover:scale-110 transition-all">
+                                6
+                            </div>
+                            <span class="text-[10px] font-mono text-pink-300 bg-pink-500/10 px-2 py-0.5 rounded font-semibold">Action</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-white group-hover:text-pink-300 transition-colors flex items-center gap-1.5">
+                                Agreement &amp; Terms
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-pink-400"></i>
+                            </h3>
+                            <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+                                Performance rate card terms and activating your custom referral link.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-pink-300 font-bold">
+                        <span>Start Recovering Declined Customers</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- FAST-TRACK ONBOARDING BAR -->
+        <section class="glass rounded-2xl p-6 sm:p-7 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-5 bg-gradient-to-r from-black/60 via-brand-dark to-black/60">
+            <div class="space-y-1 text-center sm:text-left">
+                <span class="text-xs uppercase font-bold tracking-widest text-emerald-400 flex items-center justify-center sm:justify-start gap-1.5">
+                    <i data-lucide="zap" class="w-3.5 h-3.5"></i> Ready to begin recovering lost sales?
+                </span>
+                <h4 class="text-lg font-bold font-heading text-white">Start Recovering Declined Sales</h4>
+                <p class="text-xs text-gray-400">No monthly retainers. No software subscriptions. You only pay after a recovered customer takes delivery.</p>
+            </div>
+            <div class="shrink-0 w-full sm:w-auto">
+                <a href="05-recommendation-pilot.html" class="btn-gradient w-full sm:w-auto text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl text-center shadow-lg flex items-center justify-center gap-2">
+                    <span>Start Recovering Declined Customers</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- CLEAN MINIMAL FOOTER -->
+        <footer class="pt-6 border-t border-white/10 text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center gap-3">
+                <span class="font-bold text-gray-400">Volve Media &bull; Credit Builder Flow</span>
+                <span>&bull;</span>
+                <span>Pretoria, Gauteng</span>
+            </div>
+            <div>
+                <span>Inquiries: <a href="mailto:volve@volvemedia.com" class="text-pink-400 hover:underline">volve@volvemedia.com</a></span>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Interactive Dropdown Toggle & Dynamic Ingestion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            const toggleBtn = document.getElementById('menu-toggle-btn');
+            const dropdown = document.getElementById('menu-dropdown');
+            const chevron = document.getElementById('menu-chevron');
+
+            if (toggleBtn && dropdown) {
+                toggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isHidden = dropdown.classList.contains('hidden');
+                    dropdown.classList.toggle('hidden');
+                    if (chevron) {
+                        chevron.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+                    }
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!dropdown.contains(e.target) && !toggleBtn.contains(e.target)) {
+                        dropdown.classList.add('hidden');
+                        if (chevron) {
+                            chevron.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+            }
+
+            // Dynamic Dealership Personalization from URL or LocalStorage
+            const urlParams = new URLSearchParams(window.location.search);
+            const dealerParam = urlParams.get('dealer');
+            const contactParam = urlParams.get('contact');
+            const declinesParam = urlParams.get('declines');
+
+            // Retrieve from localStorage or fallback
+            const savedDealer = localStorage.getItem('cbf_dealer');
+            const savedContact = localStorage.getItem('cbf_contact');
+            const savedDeclines = localStorage.getItem('cbf_declines');
+
+            const dealerName = dealerParam ? decodeURIComponent(dealerParam.replace(/\+/g, ' ')) : (savedDealer || "Volkswagen Auto Group");
+            const contactName = contactParam ? decodeURIComponent(contactParam.replace(/\+/g, ' ')) : (savedContact || "Johan Van Der Merwe");
+            const declines = declinesParam ? parseInt(declinesParam, 10) : (savedDeclines ? parseInt(savedDeclines, 10) : 25);
+
+            // Store in localStorage for seamless browsing across all 11 pages
+            if (dealerParam) localStorage.setItem('cbf_dealer', dealerName);
+            if (contactParam) localStorage.setItem('cbf_contact', contactName);
+            if (declinesParam) localStorage.setItem('cbf_declines', declines);
+
+            // Update DOM elements with customized text
+            const headerDealer = document.getElementById('header-dealership-name');
+            if (headerDealer) headerDealer.innerText = dealerName;
+            const heroDealer = document.getElementById('hero-dealership-name');
+            if (heroDealer) heroDealer.innerText = dealerName;
+            const metaDealer = document.getElementById('meta-dealership');
+            if (metaDealer) metaDealer.innerText = dealerName;
+
+            const heroContact = document.getElementById('hero-contact-name');
+            if (heroContact) heroContact.innerText = `${contactName} & The ${dealerName} Team`;
+            const metaContact = document.getElementById('meta-contact');
+            if (metaContact) metaContact.innerText = contactName;
+
+            const metaDeclines = document.getElementById('meta-declines');
+            if (metaDeclines) metaDeclines.innerText = `~${declines} Leads / Month`;
+
+            const lostMin = (declines * 15000).toLocaleString('en-ZA');
+            const lostMax = (declines * 20000).toLocaleString('en-ZA');
+            const lostElem = document.getElementById('lost-declines-est');
+            if (lostElem) {
+                lostElem.innerText = `Estimated R${lostMin} – R${lostMax} / mo Currently Lost to Declines`;
+            }
+
+            // Propagate query parameters to all internal links so the branding persists across pages
+            const queryToForward = `?dealer=${encodeURIComponent(dealerName)}&contact=${encodeURIComponent(contactName)}&declines=${declines}`;
+            document.querySelectorAll('a[href$=".html"]').forEach(a => {
+                const href = a.getAttribute('href');
+                if (href && !href.includes('?') && !href.startsWith('http')) {
+                    a.setAttribute('href', href + queryToForward);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

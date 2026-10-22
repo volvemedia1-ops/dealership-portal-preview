@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Microsoft Clarity Analytics & Prospect Intelligence -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yi9wab3vxv");
+    </script>
+    <script src="tracking.js"></script>
+    <!-- Favicon & Browser Tab Icons -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <title>Step 05: Revenue & ROI | Volve Media &times; Credit Builder Flow</title>
+    <meta name="description" content="The math of recovery, performance-only commercial model, and interactive ROI calculator for dealership margin salvage.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Volve Media Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            card: 'rgba(255, 255, 255, 0.03)',
+                            cardHover: 'rgba(255, 255, 255, 0.06)',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            pink: '#ec4899',
+                            rose: '#f43f5e',
+                            purple: '#9333ea',
+                            emerald: '#10b981',
+                            amber: '#f59e0b',
+                            blue: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #e2e8f0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(244, 63, 94, 0.4); /* rose-500 */
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px -10px rgba(244, 63, 94, 0.2);
+        }
+
+        .text-gradient-pink {
+            background: linear-gradient(135deg, #f9a8d4 0%, #f43f5e 50%, #be123c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+        }
+
+        .btn-gradient-pink {
+            background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient-pink:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(244, 63, 94, 0.45);
+        }
+
+        .ambient-blob {
+            position: fixed;
+            border-radius: 9999px;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.12;
+        }
+
+        /* Custom Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #f43f5e;
+            cursor: pointer;
+            margin-top: -8px;
+            box-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        .glass-header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(10, 10, 15, 0.60) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-pink-500/30 selection:text-pink-200">
+
+    <!-- Ambient Background Glow -->
+    <div class="ambient-blob w-[500px] h-[500px] bg-pink-600 top-0 right-10"></div>
+    <div class="ambient-blob w-96 h-96 bg-purple-600 bottom-1/3 left-10"></div>
+
+    <!-- STICKY TOP HEADER -->
+    <header class="relative z-30 glass-header sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 flex justify-between items-center">
+            <!-- Co-Branding & Back Link -->
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                         alt="Volve Media Logo" 
+                         class="h-8 w-auto rounded-lg shadow-sm" 
+                         loading="lazy">
+                    <div class="flex flex-col">
+                        <span class="text-base font-extrabold text-white tracking-tight font-heading leading-tight">
+                            Volve<span class="text-gradient">Media</span>
+                        </span>
+                        <span class="text-[9px] text-gray-400 font-semibold tracking-wider uppercase">Credit Builder Flow</span>
+                    </div>
+                </a>
+                <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
+                <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
+                    <i data-lucide="building-2" class="w-3.5 h-3.5 text-pink-400"></i>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Volkswagen Auto Group</span>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Consolidated Menu Toggle -->
+                <div class="relative">
+                    <button id="menu-toggle-btn" type="button" class="glass px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 hover:text-white flex items-center gap-2 border border-white/10 hover:border-pink-500/30 transition-all focus:outline-none">
+                        <i data-lucide="menu" class="w-4 h-4 text-pink-400"></i>
+                        <span>Menu</span>
+                        <i data-lucide="chevron-down" id="menu-chevron" class="w-3.5 h-3.5 text-gray-400 transition-transform"></i>
+                    </button>
+
+                    <!-- Consolidated Menu Dropdown Panel -->
+                    <div id="menu-dropdown" class="hidden absolute right-0 mt-2 w-72 sm:w-80 bg-brand-dark/95 border border-white/10 rounded-2xl shadow-2xl p-4 backdrop-blur-xl z-50 space-y-3">
+                        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
+                            Portal Sections
+                        </div>
+
+                        <div class="space-y-1 text-xs">
+                            <a href="03-scope-of-work.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-[10px]">1</span> Scope of Work
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="02-solution-options.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-[10px]">2</span> The Solution
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="case-study.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-[10px]">3</span> Case Studies &amp; Timelines
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="04-risk-compliance.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-[10px]">4</span> Risk &amp; Protection
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="01-commercial-roi.html" class="flex items-center justify-between p-2 rounded-lg bg-pink-500/10 text-pink-300 font-semibold border border-pink-500/20">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-pink-500 text-white font-bold flex items-center justify-center text-[10px]">5</span> Revenue &amp; ROI
+                                </span>
+                                <span class="text-[10px] text-pink-400 font-bold uppercase tracking-wider">Current</span>
+                            </a>
+                            <a href="05-recommendation-pilot.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-pink-500/30 text-pink-300 font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                        </div>
+
+                        <div class="pt-2 border-t border-white/10">
+                            <a href="05-recommendation-pilot.html#book-onboarding" class="w-full btn-gradient py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
+                                <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
+                                <span>Start Recovering Declined Customers</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-16 space-y-16">
+
+        <!-- 1. HERO SECTION & STRATEGIC CONTEXT -->
+        <section class="space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-pink-500/10 text-pink-400 border border-pink-500/20">
+                <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+                <span>STEP 05 &bull; COMMERCIAL ARCHITECTURE &amp; ROI</span>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-heading leading-tight">
+                    The Math of Recovery: <br class="hidden sm:inline">
+                    <span class="text-gradient-pink">Unlocking Trapped Showroom Margin.</span>
+                </h1>
+            </div>
+        </section>
+
+        <!-- 2. REVENUE LEAKAGE CALCULATOR -->
+        <section id="calculator" class="glass p-6 sm:p-10 rounded-3xl border border-pink-500/30 space-y-8 relative overflow-hidden bg-gradient-to-br from-pink-500/5 via-brand-dark to-purple-500/5 shadow-2xl">
+            <div class="absolute top-0 right-0 p-6 opacity-10 pointer-events-none">
+                <i data-lucide="calculator" class="w-32 h-32 text-pink-400"></i>
+            </div>
+            
+            <div class="relative z-10 space-y-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-pink-500/20 text-pink-300 border border-pink-500/30">
+                    <i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i>
+                    <span>Dealership Financial Modeler</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-heading">
+                    Revenue Leakage Calculator
+                </h2>
+                <p class="text-sm text-gray-300 max-w-2xl leading-relaxed">
+                    Model your showroom floor's exact finance drop-offs to see your recoverable margin and weekly cost of inaction.
+                </p>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+                
+                <!-- Input Sliders (7 Cols) -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Slider 1: Monthly Turned-Down Leads Referred -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <label class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Monthly Turned-Down Leads Referred</label>
+                                <span class="text-[11px] text-gray-400">Bank-declined buyers handed over to CBF via custom F&amp;I link</span>
+                            </div>
+                            <div class="bg-white/5 border border-pink-500/30 px-3 py-1 rounded-xl shadow-inner">
+                                <span class="text-pink-400 font-black text-lg font-heading" id="leads-val">20</span>
+                            </div>
+                        </div>
+                        <input type="range" id="leads" min="10" max="100" value="20" step="5" class="w-full">
+                        <div class="flex justify-between text-xs text-gray-400 font-semibold">
+                            <span>10</span>
+                            <span class="text-pink-400 font-bold">20 (Baseline)</span>
+                            <span>50</span>
+                            <span>100</span>
+                        </div>
+                        <p class="text-[11px] text-gray-500 italic">
+                            *Context: SA dealerships experience 50%&ndash;65% bank turn-down rates (e.g., 40 total applications yield ~20 declines).
+                        </p>
+                    </div>
+
+                    <!-- Slider 2: Average Gross Profit per Unit -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <label class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Avg GP Per Unit (Front + VAP)</label>
+                                <span class="text-[11px] text-gray-400">Combined vehicle gross + F&amp;I products commission</span>
+                            </div>
+                            <div class="bg-white/5 border border-emerald-500/30 px-3 py-1 rounded-xl shadow-inner">
+                                <span class="text-emerald-400 font-black text-lg font-heading" id="profit-val">R 25,000</span>
+                            </div>
+                        </div>
+                        <input type="range" id="profit" min="12000" max="50000" step="1000" value="25000" class="w-full">
+                        <div class="flex justify-between text-xs text-gray-400 font-semibold">
+                            <span>R 12k</span>
+                            <span class="text-emerald-400 font-bold">R 25k (Avg)</span>
+                            <span>R 50k+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Audit Output (5 Cols) -->
+                <div class="lg:col-span-5 bg-black/60 rounded-2xl p-6 sm:p-8 text-white shadow-2xl relative overflow-hidden border border-white/10 space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <p class="text-gray-400 text-[11px] uppercase tracking-widest font-bold">Estimated Recovered Gross Margin</p>
+                        </div>
+                        <p class="font-heading text-4xl sm:text-5xl font-black text-white tracking-tight" id="monthly-recovery">R 200,000</p>
+                        <span class="text-xs text-emerald-400 font-semibold block" id="units-recovered-text">8 Estimated Funded Deliveries</span>
+                        <p class="text-[10px] text-gray-400 italic">Net showroom gross retained prior to performance success fee</p>
+                    </div>
+
+                    <!-- Breakdown Grid -->
+                    <div class="grid grid-cols-2 gap-3 pt-3 border-t border-white/10 text-xs">
+                        <div class="p-3 bg-white/[0.03] border border-white/5 rounded-xl space-y-1">
+                            <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Annual Gross</span>
+                            <span class="text-lg font-extrabold text-pink-400 font-heading block" id="annual-recovery">R 2,400,000</span>
+                        </div>
+                        <div class="p-3 bg-white/[0.03] border border-white/5 rounded-xl space-y-1">
+                            <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Weekly Bleed Rate</span>
+                            <span class="text-lg font-extrabold text-rose-400 font-heading block" id="weekly-bleed">R 50,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Inaction Statement -->
+                    <div class="bg-white/[0.02] rounded-xl p-4 border border-white/10 text-xs leading-relaxed text-gray-300 flex items-start gap-2.5">
+                        <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                        <span id="dynamic-burn-text">Referring 20 bank-declined leads targets an indicative recovery of 7–8 delivered units (~35%–40% qualified benchmark) back to your showroom floor.</span>
+                    </div>
+
+                    <!-- Action Link to Step 06 -->
+                    <a href="05-recommendation-pilot.html#book-onboarding" class="w-full btn-gradient-pink py-3 px-4 rounded-xl text-xs font-bold text-center block shadow-lg hover:scale-[1.02] transition-all">
+                        <span>Lock In Your Onboarding Briefing &rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+            
+            <!-- Financial Modeling & Estimates Disclaimer -->
+            <div class="pt-5 border-t border-white/10 space-y-3">
+                <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 flex items-start gap-3 text-xs text-gray-300 leading-relaxed">
+                    <i data-lucide="info" class="w-4 h-4 text-pink-400 shrink-0 mt-0.5"></i>
+                    <div class="space-y-1">
+                        <strong class="text-white font-bold block text-xs uppercase tracking-wider">Financial Modeling &amp; Projections Disclaimer:</strong>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Projections are modeled on an indicative ~40% benchmark recovery rate. Actual delivered gross depends on your showroom's lead volume, application profile quality, and customer credit seasoning. Performance fees are invoiced strictly upon bank payout and successful vehicle delivery&mdash;zero upfront fees, zero retainer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DUAL-DIRECTION BOTTOM NAVIGATION -->
+        <section class="border-t border-white/10 pt-10 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Direction 1: Back to Step 04 (Risk & Protection) -->
+                <a href="04-risk-compliance.html" class="glass px-6 py-4 rounded-2xl hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all flex flex-col items-center justify-center space-y-1 group">
+                    <span class="text-xs text-gray-400 flex items-center gap-1.5 group-hover:text-gray-300 transition-colors">
+                        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                        <span>Previous Evaluation Step</span>
+                    </span>
+                    <span class="text-sm font-bold text-white font-heading">
+                        Back to Step 04: Risk &amp; Protection
+                    </span>
+                </a>
+
+                <!-- Direction 2: Proceed to Step 06 (Recommendation) -->
+                <a href="05-recommendation-pilot.html" class="btn-gradient-pink px-6 py-4 rounded-2xl text-center shadow-xl hover:scale-[1.02] transition-all flex flex-col items-center justify-center space-y-1">
+                    <span class="text-xs text-pink-100/80 flex items-center gap-1.5">
+                        <span>Final Evaluation Step</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                    <span class="text-sm font-extrabold text-white font-heading">
+                        Proceed to Step 06: Agreement &amp; Terms
+                    </span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative z-20 border-t border-white/10 bg-brand-dark/90 py-8 text-center text-xs text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center gap-2">
+                <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                     alt="Volve Media Logo" 
+                     class="h-5 w-auto rounded opacity-80" 
+                     loading="lazy">
+                <span class="font-extrabold text-white font-heading">Volve Media &bull; Credit Builder Flow</span>
+            </div>
+            <p class="text-[11px] text-gray-400">
+                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Volkswagen Auto Group</span>
+            </p>
+            <p class="text-[11px] text-gray-400">
+                Questions or operational inquiries: 
+                <a href="mailto:volve@volvemedia.com" class="text-pink-400 hover:text-pink-300 font-semibold underline">volve@volvemedia.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Dynamic Dealership Name & Declines Insertion from URL Parameters or LocalStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        const dealerParam = urlParams.get('dealer') || localStorage.getItem('cbf_dealer');
+        const declinesParam = urlParams.get('declines') || localStorage.getItem('cbf_declines');
+        const contactParam = urlParams.get('contact') || localStorage.getItem('cbf_contact');
+        
+        const cleanDealerName = dealerParam ? decodeURIComponent(dealerParam.replace(/\+/g, ' ')) : "Volkswagen Auto Group";
+        const elements = [
+            document.getElementById('header-dealership-name'),
+            document.getElementById('hero-dealership-name'),
+            document.getElementById('footer-dealership-name')
+        ];
+        elements.forEach(el => {
+            if (el) el.textContent = cleanDealerName;
+        });
+        document.querySelectorAll('.dealer-name-insert').forEach(el => {
+            if (el) el.textContent = cleanDealerName;
+        });
+
+        // Forward query params to all internal links
+        const queryToForward = `?dealer=${encodeURIComponent(cleanDealerName)}${contactParam ? '&contact=' + encodeURIComponent(contactParam) : ''}${declinesParam ? '&declines=' + declinesParam : ''}`;
+        document.querySelectorAll('a[href*=".html"]').forEach(a => {
+            const href = a.getAttribute('href');
+            if (href && !href.includes('?') && !href.startsWith('http') && !href.startsWith('//')) {
+                const parts = href.split('#');
+                const newHref = parts[0] + queryToForward + (parts[1] ? '#' + parts[1] : '');
+                a.setAttribute('href', newHref);
+            }
+        });
+
+        // Consolidated Menu Dropdown Interaction
+        const menuBtn = document.getElementById('menu-toggle-btn');
+        const menuDropdown = document.getElementById('menu-dropdown');
+        const menuChevron = document.getElementById('menu-chevron');
+
+        if (menuBtn && menuDropdown) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = menuDropdown.classList.contains('hidden');
+                if (isHidden) {
+                    menuDropdown.classList.remove('hidden');
+                    menuChevron.classList.add('rotate-180');
+                } else {
+                    menuDropdown.classList.add('hidden');
+                    menuChevron.classList.remove('rotate-180');
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuDropdown.contains(e.target) && !menuBtn.contains(e.target)) {
+                    menuDropdown.classList.add('hidden');
+                    menuChevron.classList.remove('rotate-180');
+                }
+            });
+        }
+
+        // Enhanced Revenue Leakage & Cost of Inaction Calculator Logic
+        const leadsSlider = document.getElementById('leads');
+        const profitSlider = document.getElementById('profit');
+        
+        const leadsVal = document.getElementById('leads-val');
+        const profitVal = document.getElementById('profit-val');
+        
+        const monthlyDisplay = document.getElementById('monthly-recovery');
+        const annualDisplay = document.getElementById('annual-recovery');
+        const weeklyBleedDisplay = document.getElementById('weekly-bleed');
+        const unitsRecoveredText = document.getElementById('units-recovered-text');
+        const dynamicBurnText = document.getElementById('dynamic-burn-text');
+
+        function updateMath() {
+            if (!leadsSlider || !profitSlider) return;
+            const leads = parseInt(leadsSlider.value);
+            const profit = parseInt(profitSlider.value);
+            
+            const formatCurrency = (num) => 'R ' + num.toLocaleString('en-ZA');
+            
+            if (leadsVal) leadsVal.innerText = leads;
+            if (profitVal) profitVal.innerText = formatCurrency(profit);
+            
+            // Benchmark: For every 20 bank declines referred, at least 8 units recovered (40% benchmark)
+            const unitsRecovered = Math.max(1, Math.round(leads * 0.40)); 
+            const monthlyValue = unitsRecovered * profit;
+            const annualValue = monthlyValue * 12;
+            const weeklyBleed = Math.round(monthlyValue / 4);
+
+            if (monthlyDisplay) monthlyDisplay.innerText = formatCurrency(monthlyValue);
+            if (annualDisplay) annualDisplay.innerText = formatCurrency(annualValue);
+            if (weeklyBleedDisplay) weeklyBleedDisplay.innerText = formatCurrency(weeklyBleed);
+            if (unitsRecoveredText) unitsRecoveredText.innerText = `${unitsRecovered} Estimated Funded Deliveries`;
+            
+            if (dynamicBurnText) {
+                dynamicBurnText.innerHTML = `Referring <strong class="text-white">${leads} turned-down leads</strong> targets an indicative recovery of <strong class="text-emerald-400">${unitsRecovered} delivered units</strong> (~35%&ndash;40% qualified benchmark) back to your showroom floor&mdash;recapturing <span class="text-white font-bold">${formatCurrency(monthlyValue)}/month</span> in gross profit that would otherwise be permanently lost.`;
+            }
+        }
+
+        if (leadsSlider && profitSlider) {
+            leadsSlider.addEventListener('input', () => {
+                localStorage.setItem('cbf_declines', leadsSlider.value);
+                updateMath();
+            });
+            profitSlider.addEventListener('input', updateMath);
+            
+            if (declinesParam) {
+                const parsedLeads = parseInt(declinesParam, 10);
+                if (!isNaN(parsedLeads)) {
+                    leadsSlider.value = Math.min(100, Math.max(10, parsedLeads));
+                }
+            }
+            updateMath();
+        }
+
+        // Initialize Lucide Icons
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

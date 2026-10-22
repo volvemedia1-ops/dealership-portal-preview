@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Microsoft Clarity Analytics & Prospect Intelligence -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yi9wab3vxv");
+    </script>
+    <script src="tracking.js"></script>
+    <!-- Favicon & Browser Tab Icons -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <title>Step 06: Agreement &amp; Onboarding | Volve Media &times; Credit Builder Flow</title>
+    <meta name="description" content="Performance-only commercial terms, rapid rollout sequence, interactive alignment booking widget, and access to the Master Service Agreement structure.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Volve Media Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            card: 'rgba(255, 255, 255, 0.03)',
+                            cardHover: 'rgba(255, 255, 255, 0.06)',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            pink: '#ec4899',
+                            rose: '#f43f5e',
+                            purple: '#9333ea',
+                            indigo: '#6366f1',
+                            emerald: '#10b981',
+                            amber: '#f59e0b',
+                            blue: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #e2e8f0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4); /* indigo-500 */
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px -10px rgba(99, 102, 241, 0.2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-indigo {
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #4338ca 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-emerald {
+            background: linear-gradient(135deg, #6ee7b7 0%, #10b981 50%, #047857 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+        }
+
+        .btn-gradient-indigo {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient-indigo:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.45);
+        }
+
+        .btn-gradient-emerald {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient-emerald:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+        }
+
+        .ambient-blob {
+            position: fixed;
+            border-radius: 9999px;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.12;
+        }
+
+        .glass-header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(10, 10, 15, 0.60) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-indigo-500/30 selection:text-indigo-200">
+
+    <!-- Ambient Background Glow -->
+    <div class="ambient-blob w-[500px] h-[500px] bg-indigo-600 top-0 right-10"></div>
+    <div class="ambient-blob w-96 h-96 bg-emerald-600 bottom-1/3 left-10"></div>
+
+    <!-- STICKY TOP HEADER -->
+    <header class="relative z-30 glass-header sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 flex justify-between items-center">
+            <!-- Co-Branding & Back Link -->
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                         alt="Volve Media Logo" 
+                         class="h-8 w-auto rounded-lg shadow-sm" 
+                         loading="lazy">
+                    <div class="flex flex-col">
+                        <span class="text-base font-extrabold text-white tracking-tight font-heading leading-tight">
+                            Volve<span class="text-gradient">Media</span>
+                        </span>
+                        <span class="text-[9px] text-gray-400 font-semibold tracking-wider uppercase">Credit Builder Flow</span>
+                    </div>
+                </a>
+                <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
+                <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
+                    <i data-lucide="building-2" class="w-3.5 h-3.5 text-indigo-400"></i>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Volkswagen Auto Group</span>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Consolidated Menu Toggle -->
+                <div class="relative">
+                    <button id="menu-toggle-btn" type="button" class="glass px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 hover:text-white flex items-center gap-2 border border-white/10 hover:border-indigo-500/30 transition-all focus:outline-none">
+                        <i data-lucide="menu" class="w-4 h-4 text-indigo-400"></i>
+                        <span>Menu</span>
+                        <i data-lucide="chevron-down" id="menu-chevron" class="w-3.5 h-3.5 text-gray-400 transition-transform"></i>
+                    </button>
+
+                    <!-- Consolidated Menu Dropdown Panel -->
+                    <div id="menu-dropdown" class="hidden absolute right-0 mt-2 w-72 sm:w-80 bg-brand-dark/95 border border-white/10 rounded-2xl shadow-2xl p-4 backdrop-blur-xl z-50 space-y-3">
+                        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
+                            Portal Sections
+                        </div>
+
+                        <div class="space-y-1 text-xs">
+                            <a href="03-scope-of-work.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-[10px]">1</span> Scope of Work
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="02-solution-options.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-[10px]">2</span> The Solution
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="case-study.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-[10px]">3</span> Case Studies &amp; Timelines
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="04-risk-compliance.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-[10px]">4</span> Risk &amp; Protection
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="01-commercial-roi.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center text-[10px]">5</span> Revenue &amp; ROI
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="05-recommendation-pilot.html" class="flex items-center justify-between p-2 rounded-lg bg-indigo-500/10 text-indigo-300 font-semibold border border-indigo-500/20">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-indigo-500 text-white font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
+                                </span>
+                                <span class="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Current</span>
+                            </a>
+                        </div>
+
+                        <div class="pt-2 border-t border-white/10">
+                            <a href="#book-onboarding" class="w-full btn-gradient-indigo py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
+                                <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
+                                <span>Start Recovering Declined Customers</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-16 space-y-16">
+
+        <!-- 1. HERO SECTION & STRATEGIC CONTEXT -->
+        <section class="space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                <span>STEP 06 &bull; COMMERCIAL EXECUTION &amp; ONBOARDING</span>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-heading leading-tight">
+                    Performance-Only Commercial Terms. <br class="hidden sm:inline">
+                    <span class="text-gradient-indigo">24-Hour Dealership Rollout.</span>
+                </h1>
+                <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">
+                    Review your performance fee schedule, lock in your 15-minute operational alignment briefing, and inspect the complete Master Service Delivery Agreement for <span class="text-white font-semibold" id="hero-dealership-name">Volkswagen Auto Group</span>.
+                </p>
+            </div>
+
+            <!-- Commercial Protection Badges -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-3">
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Upfront Capital</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-heading">R0.00</div>
+                    <div class="text-[11px] text-gray-400">Zero setup or onboarding fees</div>
+                </div>
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Monthly Retainer</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-emerald-400 font-heading">R0.00</div>
+                    <div class="text-[11px] text-gray-400">Zero recurring platform overhead</div>
+                </div>
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Fee Structure</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-indigo-400 font-heading">Contingency</div>
+                    <div class="text-[11px] text-gray-400">R6k flat (&lt;R130k) / 5% (&ge;R130k)</div>
+                </div>
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Commitment Term</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-purple-400 font-heading">Month-to-Month</div>
+                    <div class="text-[11px] text-gray-400">30-day notice &bull; Zero exit penalty</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. COMMERCIAL SERVICE AGREEMENT SUMMARY (RATE CARD) -->
+        <section class="glass p-6 sm:p-10 rounded-3xl border border-indigo-500/20 space-y-8 relative overflow-hidden">
+            <div class="ambient-blob w-80 h-80 bg-indigo-600 top-0 right-0 opacity-10"></div>
+            
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Commercial Transparency</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                    Commercial Commitment Schedule
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-300 max-w-2xl">
+                    Performance-only commercial architecture designed to ensure our incentives are directly aligned with your sales floor.
+                </p>
+            </div>
+
+            <!-- Rate Card Table -->
+            <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                <div class="divide-y divide-white/5 text-xs sm:text-sm">
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Monthly Retainer &amp; Platform License</span>
+                            <p class="text-xs text-gray-400">Unlimited F&amp;I desk access, automated tracking, and pipeline dashboard.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-white font-heading">R0.00 / month</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Upfront Setup, Technical Onboarding &amp; Staff Training</span>
+                            <p class="text-xs text-gray-400">Custom referral link generation, individual F&amp;I attribution tagging, and training kit.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-white font-heading">R0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Financial Cost If Zero Leads Are Recovered</span>
+                            <p class="text-xs text-gray-400">Complete downside insulation. The dealership bears zero balance-sheet risk.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-emerald-400 font-heading">R0.00 — No Upfront Financial Commitment</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-start gap-4 bg-indigo-500/10 border-t border-b border-indigo-500/20">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="font-extrabold text-white text-sm sm:text-base">Contingency Performance Rate Card</span>
+                                <span class="text-[10px] bg-indigo-500 text-white font-bold px-2 py-0.5 rounded uppercase">Pay on Delivery</span>
+                            </div>
+                            <div class="space-y-1.5 text-xs text-indigo-200">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400 shrink-0"></i>
+                                    <span><strong class="text-white">Vehicles Under R130,000:</strong> <span class="text-indigo-300 font-bold">R6,000 flat fee</span> (incl. VAT) &bull; Protects margin on budget stock.</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400 shrink-0"></i>
+                                    <span><strong class="text-white">Vehicles R130,000 and Above:</strong> <span class="text-indigo-300 font-bold">5.0% of Retail Selling Price</span> &bull; Aligned with higher gross &amp; F&amp;I commissions.</span>
+                                </div>
+                            </div>
+                            <p class="text-[11px] text-gray-400 pt-1">
+                                Invoiced strictly on statement <strong class="text-white">after</strong> the bank has funded the deal and the customer has taken delivery.
+                            </p>
+                        </div>
+                        <div class="text-left sm:text-right shrink-0">
+                            <span class="text-lg sm:text-xl font-extrabold text-indigo-300 font-heading">R6,000 / 5.0%</span>
+                            <span class="block text-[10px] text-gray-400">(Pay strictly on result)</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Agreement Term &amp; Termination</span>
+                            <p class="text-xs text-gray-400">Flexibility without lock-in. Either party may exit with written notice.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-sm sm:text-base font-bold text-gray-200">Month-to-Month</span>
+                            <span class="block text-[10px] text-gray-400">30 Days Notice &bull; Zero Exit Fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. THE 3-STEP ZERO-IT ONBOARDING SEQUENCE (24-HOUR ROLLOUT) -->
+        <section class="space-y-8">
+            <div class="border-b border-white/10 pb-4">
+                <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Fast Execution &bull; Zero Software Installs</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
+                    The 24-Hour Zero-IT Onboarding Sequence
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1">
+                    No API integrations, no IT permissions, and zero software downloads. Your floor can be operational within 24 hours.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                
+                <!-- Step 1 -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 relative group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-extrabold text-base">
+                        01
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-white font-heading">15-Minute Alignment Briefing</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            A focused 15-minute briefing via Google Meet or phone with your Dealer Principal and F&amp;I team to confirm routing numbers and register CRM user accounts.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 space-y-1.5 text-[11px] text-gray-400">
+                        <div class="flex items-center gap-1.5 text-indigo-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Confirm F&amp;I WhatsApp &amp; Email</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-indigo-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Establish notification protocols</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 relative group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-extrabold text-base">
+                        02
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-white font-heading">Links &amp; Dealership Toolkit</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Within 24 hours, each F&amp;I manager receives their dedicated referral URL (<code class="bg-black/40 px-1 py-0.5 rounded text-blue-300">.../[dealer]-[fi]</code>) alongside the ready-to-use Operational Toolkit.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 space-y-1.5 text-[11px] text-gray-400">
+                        <div class="flex items-center gap-1.5 text-blue-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Unique tracking link per F&amp;I desk</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-blue-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>30-second customer WhatsApp scripts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 relative group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-extrabold text-base">
+                        03
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-white font-heading">Refer Declines &amp; Track Metal</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            F&amp;I managers forward the link whenever a bank decline occurs. In the background, CBF executes the rehabilitation and alerts your desk the moment the lead is finance-ready.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 space-y-1.5 text-[11px] text-gray-400">
+                        <div class="flex items-center gap-1.5 text-emerald-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Zero DMS installation required</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-emerald-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Real-time portal visibility</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. INTERACTIVE BOOKING ENGINE & INSTANT ACTIVATION -->
+        <section id="book-onboarding" class="glass p-6 sm:p-10 rounded-3xl border border-white/10 space-y-8 relative overflow-hidden">
+            <div class="ambient-blob w-80 h-80 bg-indigo-600 top-0 left-0 opacity-10"></div>
+            
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Operational Activation</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                    Schedule Your 15-Minute Operational Alignment Call
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-300 max-w-2xl">
+                    Select a convenient briefing window. We will review your F&amp;I setup, confirm your attribution tracking parameters, and dispatch your desk referral links within 24 hours.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Interactive Slot Selector (Left 2 cols) -->
+                <div class="lg:col-span-2 glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-6">
+                    <div class="space-y-4">
+                        <label class="text-xs font-bold text-gray-300 uppercase tracking-wider block">
+                            1. Select Briefing Date
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="date-selector">
+                            <button type="button" class="date-btn p-3 rounded-xl border border-indigo-500 bg-indigo-500/20 text-white text-center transition-all" data-date="Tomorrow">
+                                <span class="block text-[10px] text-indigo-300 uppercase font-bold">Tomorrow</span>
+                                <span class="block text-sm font-extrabold">Day 1</span>
+                            </button>
+                            <button type="button" class="date-btn p-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-center hover:border-white/20 transition-all" data-date="+2 Days">
+                                <span class="block text-[10px] text-gray-400 uppercase font-bold">In 2 Days</span>
+                                <span class="block text-sm font-extrabold">Day 2</span>
+                            </button>
+                            <button type="button" class="date-btn p-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-center hover:border-white/20 transition-all" data-date="+3 Days">
+                                <span class="block text-[10px] text-gray-400 uppercase font-bold">In 3 Days</span>
+                                <span class="block text-sm font-extrabold">Day 3</span>
+                            </button>
+                            <button type="button" class="date-btn p-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-center hover:border-white/20 transition-all" data-date="Next Week">
+                                <span class="block text-[10px] text-gray-400 uppercase font-bold">Next Week</span>
+                                <span class="block text-sm font-extrabold">Mon</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <label class="text-xs font-bold text-gray-300 uppercase tracking-wider block">
+                            2. Choose 15-Minute Time Window
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5" id="time-selector">
+                            <button type="button" class="time-btn p-2.5 rounded-xl border border-white/10 bg-white/5 text-xs text-gray-300 hover:border-indigo-500/40 transition-all text-center" data-time="09:00 - 09:15">
+                                09:00 AM
+                            </button>
+                            <button type="button" class="time-btn p-2.5 rounded-xl border border-white/10 bg-white/5 text-xs text-gray-300 hover:border-indigo-500/40 transition-all text-center" data-time="10:30 - 10:45">
+                                10:30 AM
+                            </button>
+                            <button type="button" class="time-btn p-2.5 rounded-xl border border-indigo-500 bg-indigo-500/20 text-xs text-white font-bold transition-all text-center" data-time="11:00 - 11:15">
+                                11:00 AM
+                            </button>
+                            <button type="button" class="time-btn p-2.5 rounded-xl border border-white/10 bg-white/5 text-xs text-gray-300 hover:border-indigo-500/40 transition-all text-center" data-time="11:30 - 11:45">
+                                11:30 AM
+                            </button>
+                            <button type="button" class="time-btn p-2.5 rounded-xl border border-white/10 bg-white/5 text-xs text-gray-300 hover:border-indigo-500/40 transition-all text-center" data-time="12:00 - 12:15">
+                                12:00 PM
+                            </button>
+                            <button type="button" class="time-btn p-2.5 rounded-xl border border-white/10 bg-white/5 text-xs text-gray-300 hover:border-indigo-500/40 transition-all text-center" data-time="14:00 - 14:15">
+                                02:00 PM
+                            </button>
+                        </div>
+                    </div>
+
+                    <form id="booking-form" class="space-y-4 pt-2 border-t border-white/10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1.5">
+                                <label for="booking-name" class="text-xs text-gray-400 font-medium">Full Name &amp; Title</label>
+                                <input type="text" id="booking-name" name="fullName" required placeholder="e.g. Johan van der Merwe (Dealer Principal)" class="w-full bg-brand-dark border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label for="booking-phone" class="text-xs text-gray-400 font-medium">Direct WhatsApp / Mobile Number</label>
+                                <input type="tel" id="booking-phone" name="phone" required placeholder="e.g. +27 82 123 4567" class="w-full bg-brand-dark border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2">
+                            <div class="text-[11px] text-gray-400 flex items-center gap-1.5">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                                <span>No credit card or commitment required.</span>
+                            </div>
+                            <button type="submit" class="btn-gradient-indigo px-6 py-2.5 rounded-xl text-xs font-bold text-white flex items-center gap-2 shadow-lg hover:brightness-110 transition-all">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                                <span>Confirm Briefing Slot</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Confirmation Notice (Hidden initially) -->
+                    <div id="booking-confirmed-modal" class="hidden p-5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300 space-y-2.5 animate-fade-in">
+                        <div class="font-bold flex items-center gap-2 text-sm text-white">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Briefing Slot Confirmed via WhatsApp!</span>
+                        </div>
+                        <p class="text-gray-300">
+                            A WhatsApp message has opened to connect your desk directly with our onboarding lead. If it didn't open automatically, click below:
+                        </p>
+                        <div class="pt-1">
+                            <a id="booking-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-gradient-emerald text-white font-bold text-xs shadow-lg hover:brightness-110 transition-all">
+                                <i data-lucide="message-square" class="w-4 h-4"></i>
+                                <span>Open WhatsApp Chat Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct WhatsApp Line (Right 1 col) -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white font-heading">
+                            Prefer a Specific Meeting Time?
+                        </h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            If you want to set a specific time instead, contact one of our Partnership Managers to book in a time.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <a href="https://wa.me/27794762500?text=Hi%20Volve%20Media,%20we%20reviewed%20the%20commercial%20portal%20and%20would%20like%20to%20set%20a%20specific%20time%20to%20discuss%20activating%20Credit%20Builder%20Flow%20for%20our%20dealership." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="w-full btn-gradient-emerald py-3 rounded-xl text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg hover:brightness-110 transition-all">
+                            <i data-lucide="phone-forwarded" class="w-4 h-4"></i>
+                            <span>Message Partnership Manager (+27 79 476 2500)</span>
+                        </a>
+                        <p class="text-[10px] text-gray-500 text-center">
+                            Dedicated Operational Desk WhatsApp: +27 79 476 2500 &bull; &le; 15 min reply time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LEGAL & GOVERNANCE TRANSPARENCY (SERVICE AGREEMENT MOCKUP) -->
+        <section class="p-6 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/10 border-l-4 border-l-indigo-500 shadow-xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                <div class="space-y-1.5 max-w-2xl">
+                    <div class="flex items-center gap-2 text-xs font-bold text-indigo-400 uppercase tracking-wider">
+                        <i data-lucide="scale" class="w-4 h-4"></i>
+                        <span>Legal &amp; Governance Transparency</span>
+                        <span class="text-[10px] bg-amber-500/15 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30 font-bold uppercase">Illustrative Agreement Preview</span>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-white font-heading">
+                        Master Service Delivery Agreement
+                    </h2>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Review an illustrative preview showing how our Master Service Delivery Agreement is structured before your alignment call. Every clause protects your floor and is structured in alignment with POPIA &amp; NCR statutory requirements.
+                    </p>
+                </div>
+
+                <!-- Primary Action: View Service Agreement Button -->
+                <div class="shrink-0">
+                    <a href="dealership-service-agreement.html" 
+                       class="btn-gradient-indigo px-7 py-3.5 rounded-xl text-white font-bold text-xs flex items-center gap-2.5 shadow-xl hover:scale-105 transition-all group">
+                        <i data-lucide="file-text" class="w-4 h-4 text-white group-hover:scale-110 transition-transform"></i>
+                        <span>View Agreement Structure</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. DUAL-DIRECTION BOTTOM NAVIGATION -->
+        <section class="border-t border-white/10 pt-10 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Direction 1: Back to Step 05 (Revenue & ROI) -->
+                <a href="01-commercial-roi.html" class="glass px-6 py-4 rounded-2xl hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all flex flex-col items-center justify-center space-y-1 group">
+                    <span class="text-xs text-gray-400 flex items-center gap-1.5 group-hover:text-gray-300 transition-colors">
+                        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                        <span>Previous Evaluation Step</span>
+                    </span>
+                    <span class="text-sm font-bold text-white font-heading">
+                        Back to Step 05: Revenue &amp; ROI
+                    </span>
+                </a>
+
+                <!-- Direction 2: Return to Portal Home -->
+                <a href="index.html" class="btn-gradient px-6 py-4 rounded-2xl text-center shadow-xl hover:scale-[1.02] transition-all flex flex-col items-center justify-center space-y-1">
+                    <span class="text-xs text-white/80 flex items-center gap-1.5">
+                        <span>Evaluation Complete</span>
+                        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                    </span>
+                    <span class="text-sm font-extrabold text-white font-heading">
+                        Return to Portal Home
+                    </span>
+                </a>
+            </div>
+
+            <div class="text-center pt-2">
+                <span class="text-xs text-gray-400">
+                    Need to review legal terms first? 
+                    <a href="dealership-service-agreement.html" class="text-indigo-400 hover:text-indigo-300 font-semibold underline underline-offset-4 ml-1">
+                        Open Master Service Agreement Mock-Up &rarr;
+                    </a>
+                </span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative z-20 border-t border-white/10 bg-brand-dark/90 py-8 text-center text-xs text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center gap-2">
+                <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                     alt="Volve Media Logo" 
+                     class="h-5 w-auto rounded opacity-80" 
+                     loading="lazy">
+                <span class="font-extrabold text-white font-heading">Volve Media &bull; Credit Builder Flow</span>
+            </div>
+            <p class="text-[11px] text-gray-400">
+                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Volkswagen Auto Group</span>
+            </p>
+            <p class="text-[11px] text-gray-400">
+                Questions or operational inquiries: 
+                <a href="mailto:volve@volvemedia.com" class="text-indigo-400 hover:text-indigo-300 font-semibold underline">volve@volvemedia.com</a>
+                &bull; WhatsApp: 
+                <a href="https://wa.me/27794762500" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold underline">+27 79 476 2500</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dynamic Dealership Name Insertion from URL Parameters or LocalStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        const dealerParam = urlParams.get('dealer') || localStorage.getItem('cbf_dealer');
+        
+        if (dealerParam) {
+            const cleanDealerName = decodeURIComponent(dealerParam.replace(/\+/g, ' '));
+            const elements = [
+                document.getElementById('header-dealership-name'),
+                document.getElementById('hero-dealership-name'),
+                document.getElementById('footer-dealership-name')
+            ];
+            elements.forEach(el => {
+                if (el) el.textContent = cleanDealerName;
+            });
+        }
+
+        // Forward query params to all internal links
+        if (window.location.search) {
+            document.querySelectorAll('a[href$=".html"]').forEach(a => {
+                const href = a.getAttribute('href');
+                if (href && !href.includes('?') && !href.startsWith('http')) {
+                    a.setAttribute('href', href + window.location.search);
+                }
+            });
+        }
+
+        // Consolidated Menu Dropdown Interaction
+        const menuBtn = document.getElementById('menu-toggle-btn');
+        const menuDropdown = document.getElementById('menu-dropdown');
+        const menuChevron = document.getElementById('menu-chevron');
+
+        if (menuBtn && menuDropdown) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = menuDropdown.classList.contains('hidden');
+                if (isHidden) {
+                    menuDropdown.classList.remove('hidden');
+                    menuChevron.classList.add('rotate-180');
+                } else {
+                    menuDropdown.classList.add('hidden');
+                    menuChevron.classList.remove('rotate-180');
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuDropdown.contains(e.target) && !menuBtn.contains(e.target)) {
+                    menuDropdown.classList.add('hidden');
+                    menuChevron.classList.remove('rotate-180');
+                }
+            });
+        }
+
+        // Booking Calendar Selector Interactions & WhatsApp Handoff
+        let selectedDate = 'Tomorrow';
+        let selectedTime = '11:00 - 11:15 (11:00 AM)';
+
+        const dateButtons = document.querySelectorAll('.date-btn');
+        dateButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                dateButtons.forEach(b => {
+                    b.classList.remove('border-indigo-500', 'bg-indigo-500/20', 'text-white');
+                    b.classList.add('border-white/10', 'bg-white/5', 'text-gray-300');
+                    const subLabel = b.querySelector('span:first-child');
+                    if (subLabel) {
+                        subLabel.classList.remove('text-indigo-300');
+                        subLabel.classList.add('text-gray-400');
+                    }
+                });
+                btn.classList.remove('border-white/10', 'bg-white/5', 'text-gray-300');
+                btn.classList.add('border-indigo-500', 'bg-indigo-500/20', 'text-white');
+                const activeSubLabel = btn.querySelector('span:first-child');
+                if (activeSubLabel) {
+                    activeSubLabel.classList.remove('text-gray-400');
+                    activeSubLabel.classList.add('text-indigo-300');
+                }
+                selectedDate = btn.getAttribute('data-date') || 'Tomorrow';
+            });
+        });
+
+        const timeButtons = document.querySelectorAll('.time-btn');
+        timeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                timeButtons.forEach(b => {
+                    b.classList.remove('border-indigo-500', 'bg-indigo-500/20', 'text-white', 'font-bold');
+                    b.classList.add('border-white/10', 'bg-white/5', 'text-gray-300');
+                });
+                btn.classList.remove('border-white/10', 'bg-white/5', 'text-gray-300');
+                btn.classList.add('border-indigo-500', 'bg-indigo-500/20', 'text-white', 'font-bold');
+                selectedTime = btn.getAttribute('data-time') || btn.innerText.trim();
+            });
+        });
+
+        const bookingForm = document.getElementById('booking-form');
+        const bookingModal = document.getElementById('booking-confirmed-modal');
+        const bookingWaLink = document.getElementById('booking-wa-link');
+
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const fullName = document.getElementById('booking-name')?.value.trim() || 'Dealership Executive';
+                const phone = document.getElementById('booking-phone')?.value.trim() || '';
+                const dealerName = document.getElementById('hero-dealership-name')?.textContent.trim() || 'Volkswagen Auto Group';
+
+                const waMessage = `Hi Volve Media team,\n\nI would like to confirm our 15-minute briefing slot for Credit Builder Flow:\n\n• Date: ${selectedDate}\n• Time: ${selectedTime}\n• Name & Title: ${fullName}\n• Dealership: ${dealerName}\n• WhatsApp / Mobile: ${phone}\n\nPlease share the Google Meet briefing invitation.`;
+
+                const encodedMessage = encodeURIComponent(waMessage);
+                const waUrl = `https://wa.me/27794762500?text=${encodedMessage}`;
+
+                // Update fallback link inside modal
+                if (bookingWaLink) {
+                    bookingWaLink.setAttribute('href', waUrl);
+                }
+
+                // Show confirmation modal
+                if (bookingModal) {
+                    bookingModal.classList.remove('hidden');
+                }
+
+                // Re-initialize Lucide icons in case any were unhidden/added
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+
+                // Track submission event in Microsoft Clarity
+                if (window.clarity) {
+                    window.clarity('event', 'Briefing_Slot_Confirmed');
+                }
+
+                // Open WhatsApp in new tab / app
+                window.open(waUrl, '_blank');
+            });
+        }
+    </script>
+</body>
+</html>
