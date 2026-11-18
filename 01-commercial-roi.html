@@ -192,7 +192,7 @@
                 <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
                 <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
                     <i data-lucide="building-2" class="w-3.5 h-3.5 text-pink-400"></i>
-                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Volkswagen Auto Group</span>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Your Dealership</span>
                 </div>
             </div>
 
@@ -243,7 +243,7 @@
                                 </span>
                                 <span class="text-[10px] text-pink-400 font-bold uppercase tracking-wider">Current</span>
                             </a>
-                            <a href="05-recommendation-pilot.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <a href="05-next-steps.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
                                 <span class="flex items-center gap-2.5">
                                     <span class="w-5 h-5 rounded bg-pink-500/30 text-pink-300 font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
                                 </span>
@@ -252,9 +252,9 @@
                         </div>
 
                         <div class="pt-2 border-t border-white/10">
-                            <a href="05-recommendation-pilot.html#book-onboarding" class="w-full btn-gradient py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
-                                <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
-                                <span>Start Recovering Declined Customers</span>
+                            <a href="05-next-steps.html#activation-steps" class="w-full btn-gradient py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
+                                <i data-lucide="file-signature" class="w-3.5 h-3.5"></i>
+                                <span>Proceed to Agreement &amp; Activation</span>
                             </a>
                         </div>
                     </div>
@@ -300,30 +300,30 @@
                 </p>
             </div>
 
-            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-2">
                 
                 <!-- Input Sliders (7 Cols) -->
-                <div class="lg:col-span-7 space-y-8">
+                <div class="lg:col-span-7 space-y-7">
                     <!-- Slider 1: Monthly Turned-Down Leads Referred -->
                     <div class="space-y-3">
                         <div class="flex justify-between items-end">
                             <div>
-                                <label class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Monthly Turned-Down Leads Referred</label>
-                                <span class="text-[11px] text-gray-400">Bank-declined buyers handed over to CBF via custom F&amp;I link</span>
+                                <label for="leads" class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Monthly Turned-Down Leads Referred</label>
+                                <span class="text-[11px] text-gray-400">Bank-declined buyers handed the referral link by your F&amp;I team</span>
                             </div>
                             <div class="bg-white/5 border border-pink-500/30 px-3 py-1 rounded-xl shadow-inner">
-                                <span class="text-pink-400 font-black text-lg font-heading" id="leads-val">20</span>
+                                <span class="text-pink-400 font-black text-lg font-heading" id="leads-val">25</span>
                             </div>
                         </div>
-                        <input type="range" id="leads" min="10" max="100" value="20" step="5" class="w-full">
+                        <input type="range" id="leads" min="10" max="100" value="25" step="1" class="w-full">
                         <div class="flex justify-between text-xs text-gray-400 font-semibold">
                             <span>10</span>
-                            <span class="text-pink-400 font-bold">20 (Baseline)</span>
+                            <span class="text-pink-400 font-bold">25 (Baseline)</span>
                             <span>50</span>
                             <span>100</span>
                         </div>
                         <p class="text-[11px] text-gray-500 italic">
-                            *Context: SA dealerships experience 50%&ndash;65% bank turn-down rates (e.g., 40 total applications yield ~20 declines).
+                            *Context: SA dealerships typically see 50%&ndash;65% bank turn-down rates (e.g., ~45 finance applications yield ~25 declines).
                         </p>
                     </div>
 
@@ -331,55 +331,112 @@
                     <div class="space-y-3">
                         <div class="flex justify-between items-end">
                             <div>
-                                <label class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Avg GP Per Unit (Front + VAP)</label>
-                                <span class="text-[11px] text-gray-400">Combined vehicle gross + F&amp;I products commission</span>
+                                <label for="profit" class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Avg GP Per Unit (Front + VAP)</label>
+                                <span class="text-[11px] text-gray-400">Combined vehicle front-end gross + F&amp;I / VAP commission</span>
                             </div>
                             <div class="bg-white/5 border border-emerald-500/30 px-3 py-1 rounded-xl shadow-inner">
-                                <span class="text-emerald-400 font-black text-lg font-heading" id="profit-val">R 25,000</span>
+                                <span class="text-emerald-400 font-black text-lg font-heading" id="profit-val">R 20,000</span>
                             </div>
                         </div>
-                        <input type="range" id="profit" min="12000" max="50000" step="1000" value="25000" class="w-full">
+                        <input type="range" id="profit" min="12000" max="50000" step="1000" value="20000" class="w-full">
                         <div class="flex justify-between text-xs text-gray-400 font-semibold">
                             <span>R 12k</span>
-                            <span class="text-emerald-400 font-bold">R 25k (Avg)</span>
-                            <span>R 50k+</span>
+                            <span class="text-emerald-400 font-bold">R 20k (Avg)</span>
+                            <span>R 35k</span>
+                            <span>R 50k</span>
                         </div>
+                    </div>
+
+                    <!-- Slider 3: Average Vehicle Retail Selling Price -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <label for="vehicle-price" class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Avg Vehicle Retail Selling Price</label>
+                                <span class="text-[11px] text-gray-400">Determines CBF fee tier: R6,000 flat (&lt; R130k) or 5.0% (&ge; R130k), incl. VAT</span>
+                            </div>
+                            <div class="bg-white/5 border border-blue-500/30 px-3 py-1 rounded-xl shadow-inner">
+                                <span class="text-blue-400 font-black text-lg font-heading" id="vehicle-price-val">R 180,000</span>
+                            </div>
+                        </div>
+                        <input type="range" id="vehicle-price" min="90000" max="400000" step="10000" value="180000" class="w-full">
+                        <div class="flex justify-between text-xs text-gray-400 font-semibold">
+                            <span>R 90k</span>
+                            <span class="text-amber-300">R 130k Tier Split</span>
+                            <span>R 250k</span>
+                            <span>R 400k</span>
+                        </div>
+                        <p class="text-[11px] text-blue-300 font-medium" id="fee-tier-badge">
+                            Active fee tier: 5.0% of Retail Selling Price (R 9,000 incl. VAT per funded delivery)
+                        </p>
                     </div>
                 </div>
 
                 <!-- Comprehensive Audit Output (5 Cols) -->
-                <div class="lg:col-span-5 bg-black/60 rounded-2xl p-6 sm:p-8 text-white shadow-2xl relative overflow-hidden border border-white/10 space-y-6">
-                    <div class="space-y-2">
+                <div class="lg:col-span-5 bg-black/60 rounded-2xl p-6 sm:p-8 text-white shadow-2xl relative overflow-hidden border border-white/10 space-y-5">
+                    
+                    <!-- Transparent Conversion Funnel -->
+                    <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/10 text-center">
+                        <div>
+                            <span class="text-[9px] text-gray-400 uppercase font-bold block">Referred</span>
+                            <span class="text-sm font-extrabold text-white font-heading" id="funnel-leads">25/mo</span>
+                        </div>
+                        <div class="border-x border-white/10">
+                            <span class="text-[9px] text-blue-300 uppercase font-bold block">Qualified (~60%)</span>
+                            <span class="text-sm font-extrabold text-blue-400 font-heading" id="funnel-qualified">15/mo</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-emerald-300 uppercase font-bold block">Deliveries (~25%)</span>
+                            <span class="text-sm font-extrabold text-emerald-400 font-heading" id="funnel-units">6 units</span>
+                        </div>
+                    </div>
+
+                    <!-- Primary Net Outcome -->
+                    <div class="space-y-1.5">
                         <div class="flex items-center space-x-2">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <p class="text-gray-400 text-[11px] uppercase tracking-widest font-bold">Estimated Recovered Gross Margin</p>
+                            <p class="text-gray-400 text-[11px] uppercase tracking-widest font-bold">Net Monthly Profit Retained by Dealership</p>
                         </div>
-                        <p class="font-heading text-4xl sm:text-5xl font-black text-white tracking-tight" id="monthly-recovery">R 200,000</p>
-                        <span class="text-xs text-emerald-400 font-semibold block" id="units-recovered-text">8 Estimated Funded Deliveries</span>
-                        <p class="text-[10px] text-gray-400 italic">Net showroom gross retained prior to performance success fee</p>
+                        <p class="font-heading text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight" id="monthly-recovery">R 66,000</p>
+                        <span class="text-xs text-emerald-300 font-semibold block" id="units-recovered-text">6 Estimated Funded Deliveries (~40% of 15 qualified opt-ins)</span>
+                    </div>
+
+                    <!-- Explicit Gross vs CBF Fee Ledger -->
+                    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 space-y-2 text-xs">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">Est. Monthly Gross Profit Recovered</span>
+                            <span class="font-bold text-white font-mono" id="gross-recovery">R 120,000</span>
+                        </div>
+                        <div class="flex items-center justify-between text-rose-300">
+                            <span>Less CBF Contingency Fee (incl. VAT)</span>
+                            <span class="font-bold font-mono" id="cbf-fee-total">- R 54,000</span>
+                        </div>
+                        <div class="pt-2 border-t border-white/10 flex items-center justify-between text-emerald-400 font-extrabold">
+                            <span>Net Monthly Profit Retained</span>
+                            <span class="font-mono" id="net-ledger-total">R 66,000</span>
+                        </div>
                     </div>
 
                     <!-- Breakdown Grid -->
-                    <div class="grid grid-cols-2 gap-3 pt-3 border-t border-white/10 text-xs">
+                    <div class="grid grid-cols-2 gap-3 text-xs">
                         <div class="p-3 bg-white/[0.03] border border-white/5 rounded-xl space-y-1">
-                            <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Annual Gross</span>
-                            <span class="text-lg font-extrabold text-pink-400 font-heading block" id="annual-recovery">R 2,400,000</span>
+                            <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Annual Net Retained</span>
+                            <span class="text-lg font-extrabold text-pink-400 font-heading block" id="annual-recovery">R 792,000</span>
                         </div>
                         <div class="p-3 bg-white/[0.03] border border-white/5 rounded-xl space-y-1">
-                            <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Weekly Bleed Rate</span>
-                            <span class="text-lg font-extrabold text-rose-400 font-heading block" id="weekly-bleed">R 50,000</span>
+                            <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Weekly Net Opportunity</span>
+                            <span class="text-lg font-extrabold text-rose-400 font-heading block" id="weekly-bleed">R 16,500</span>
                         </div>
                     </div>
 
                     <!-- Dynamic Inaction Statement -->
-                    <div class="bg-white/[0.02] rounded-xl p-4 border border-white/10 text-xs leading-relaxed text-gray-300 flex items-start gap-2.5">
+                    <div class="bg-white/[0.02] rounded-xl p-3.5 border border-white/10 text-xs leading-relaxed text-gray-300 flex items-start gap-2.5">
                         <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
-                        <span id="dynamic-burn-text">Referring 20 bank-declined leads targets an indicative recovery of 7–8 delivered units (~35%–40% qualified benchmark) back to your showroom floor.</span>
+                        <span id="dynamic-burn-text">Referring 25 declines (~15 qualified opt-ins) yields ~6 funded units/month: R 120,000 gross recovered minus R 54,000 CBF fee (incl. VAT) = R 66,000 net profit retained.</span>
                     </div>
 
                     <!-- Action Link to Step 06 -->
-                    <a href="05-recommendation-pilot.html#book-onboarding" class="w-full btn-gradient-pink py-3 px-4 rounded-xl text-xs font-bold text-center block shadow-lg hover:scale-[1.02] transition-all">
-                        <span>Lock In Your Onboarding Briefing &rarr;</span>
+                    <a href="05-next-steps.html#activation-steps" class="w-full btn-gradient-pink py-3 px-4 rounded-xl text-xs font-bold text-center block shadow-lg hover:scale-[1.02] transition-all">
+                        <span>Proceed to Step 06: Agreement &amp; Terms &rarr;</span>
                     </a>
                 </div>
 
@@ -390,9 +447,9 @@
                 <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 flex items-start gap-3 text-xs text-gray-300 leading-relaxed">
                     <i data-lucide="info" class="w-4 h-4 text-pink-400 shrink-0 mt-0.5"></i>
                     <div class="space-y-1">
-                        <strong class="text-white font-bold block text-xs uppercase tracking-wider">Financial Modeling &amp; Projections Disclaimer:</strong>
+                        <strong class="text-white font-bold block text-xs uppercase tracking-wider">Transparent Financial Modeling &amp; Projections Disclaimer:</strong>
                         <p class="text-gray-400 text-xs leading-relaxed">
-                            Projections are modeled on an indicative ~40% benchmark recovery rate. Actual delivered gross depends on your showroom's lead volume, application profile quality, and customer credit seasoning. Performance fees are invoiced strictly upon bank payout and successful vehicle delivery&mdash;zero upfront fees, zero retainer.
+                            Modeled conservatively on raw referrals: roughly 60% of referred declines meet baseline qualification and complete direct digital opt-in, and ~40% of qualified opt-ins convert into funded vehicle deliveries (~25% of total referred declines, rounded to whole units). CBF&rsquo;s contingency fee (R6,000 flat incl. VAT for vehicles under R130,000, or 5.0% of Retail Selling Price incl. VAT for vehicles R130,000+) is explicitly deducted above so you see true Net Profit Retained. Zero upfront fees, zero retainer&mdash;invoiced strictly upon bank payout and delivery.
                         </p>
                     </div>
                 </div>
@@ -413,8 +470,8 @@
                     </span>
                 </a>
 
-                <!-- Direction 2: Proceed to Step 06 (Recommendation) -->
-                <a href="05-recommendation-pilot.html" class="btn-gradient-pink px-6 py-4 rounded-2xl text-center shadow-xl hover:scale-[1.02] transition-all flex flex-col items-center justify-center space-y-1">
+                <!-- Direction 2: Proceed to Step 06 (Next Steps & Agreement) -->
+                <a href="05-next-steps.html" class="btn-gradient-pink px-6 py-4 rounded-2xl text-center shadow-xl hover:scale-[1.02] transition-all flex flex-col items-center justify-center space-y-1">
                     <span class="text-xs text-pink-100/80 flex items-center gap-1.5">
                         <span>Final Evaluation Step</span>
                         <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -439,7 +496,7 @@
                 <span class="font-extrabold text-white font-heading">Volve Media &bull; Credit Builder Flow</span>
             </div>
             <p class="text-[11px] text-gray-400">
-                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Volkswagen Auto Group</span>
+                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Your Dealership</span>
             </p>
             <p class="text-[11px] text-gray-400">
                 Questions or operational inquiries: 
@@ -449,36 +506,11 @@
     </footer>
 
     <!-- INTERACTIVE SCRIPTS -->
+    <script src="portal-personalize.js"></script>
     <script>
-        // Dynamic Dealership Name & Declines Insertion from URL Parameters or LocalStorage
-        const urlParams = new URLSearchParams(window.location.search);
-        const dealerParam = urlParams.get('dealer') || localStorage.getItem('cbf_dealer');
-        const declinesParam = urlParams.get('declines') || localStorage.getItem('cbf_declines');
-        const contactParam = urlParams.get('contact') || localStorage.getItem('cbf_contact');
-        
-        const cleanDealerName = dealerParam ? decodeURIComponent(dealerParam.replace(/\+/g, ' ')) : "Volkswagen Auto Group";
-        const elements = [
-            document.getElementById('header-dealership-name'),
-            document.getElementById('hero-dealership-name'),
-            document.getElementById('footer-dealership-name')
-        ];
-        elements.forEach(el => {
-            if (el) el.textContent = cleanDealerName;
-        });
-        document.querySelectorAll('.dealer-name-insert').forEach(el => {
-            if (el) el.textContent = cleanDealerName;
-        });
-
-        // Forward query params to all internal links
-        const queryToForward = `?dealer=${encodeURIComponent(cleanDealerName)}${contactParam ? '&contact=' + encodeURIComponent(contactParam) : ''}${declinesParam ? '&declines=' + declinesParam : ''}`;
-        document.querySelectorAll('a[href*=".html"]').forEach(a => {
-            const href = a.getAttribute('href');
-            if (href && !href.includes('?') && !href.startsWith('http') && !href.startsWith('//')) {
-                const parts = href.split('#');
-                const newHref = parts[0] + queryToForward + (parts[1] ? '#' + parts[1] : '');
-                a.setAttribute('href', newHref);
-            }
-        });
+        if (window.CBF_PERSONALIZE) {
+            window.CBF_PERSONALIZE.apply();
+        }
 
         // Consolidated Menu Dropdown Interaction
         const menuBtn = document.getElementById('menu-toggle-btn');
@@ -491,78 +523,123 @@
                 const isHidden = menuDropdown.classList.contains('hidden');
                 if (isHidden) {
                     menuDropdown.classList.remove('hidden');
-                    menuChevron.classList.add('rotate-180');
+                    if (menuChevron) menuChevron.classList.add('rotate-180');
                 } else {
                     menuDropdown.classList.add('hidden');
-                    menuChevron.classList.remove('rotate-180');
+                    if (menuChevron) menuChevron.classList.remove('rotate-180');
                 }
             });
 
-            // Close dropdown when clicking outside
             document.addEventListener('click', (e) => {
                 if (!menuDropdown.contains(e.target) && !menuBtn.contains(e.target)) {
                     menuDropdown.classList.add('hidden');
-                    menuChevron.classList.remove('rotate-180');
+                    if (menuChevron) menuChevron.classList.remove('rotate-180');
                 }
             });
         }
 
-        // Enhanced Revenue Leakage & Cost of Inaction Calculator Logic
+        // Transparent Revenue Leakage & Net Profit Retained Calculator Logic
         const leadsSlider = document.getElementById('leads');
         const profitSlider = document.getElementById('profit');
-        
+        const vehiclePriceSlider = document.getElementById('vehicle-price');
+
         const leadsVal = document.getElementById('leads-val');
         const profitVal = document.getElementById('profit-val');
-        
+        const vehiclePriceVal = document.getElementById('vehicle-price-val');
+        const feeTierBadge = document.getElementById('fee-tier-badge');
+
+        const funnelLeads = document.getElementById('funnel-leads');
+        const funnelQualified = document.getElementById('funnel-qualified');
+        const funnelUnits = document.getElementById('funnel-units');
+
         const monthlyDisplay = document.getElementById('monthly-recovery');
+        const grossDisplay = document.getElementById('gross-recovery');
+        const feeTotalDisplay = document.getElementById('cbf-fee-total');
+        const netLedgerDisplay = document.getElementById('net-ledger-total');
         const annualDisplay = document.getElementById('annual-recovery');
         const weeklyBleedDisplay = document.getElementById('weekly-bleed');
         const unitsRecoveredText = document.getElementById('units-recovered-text');
         const dynamicBurnText = document.getElementById('dynamic-burn-text');
 
-        function updateMath() {
-            if (!leadsSlider || !profitSlider) return;
-            const leads = parseInt(leadsSlider.value);
-            const profit = parseInt(profitSlider.value);
-            
-            const formatCurrency = (num) => 'R ' + num.toLocaleString('en-ZA');
-            
-            if (leadsVal) leadsVal.innerText = leads;
-            if (profitVal) profitVal.innerText = formatCurrency(profit);
-            
-            // Benchmark: For every 20 bank declines referred, at least 8 units recovered (40% benchmark)
-            const unitsRecovered = Math.max(1, Math.round(leads * 0.40)); 
-            const monthlyValue = unitsRecovered * profit;
-            const annualValue = monthlyValue * 12;
-            const weeklyBleed = Math.round(monthlyValue / 4);
+        function formatCurrency(num) {
+            var absFormatted = Math.abs(Math.round(num)).toLocaleString('en-ZA');
+            return (num < 0 ? '-R ' : 'R ') + absFormatted;
+        }
 
-            if (monthlyDisplay) monthlyDisplay.innerText = formatCurrency(monthlyValue);
-            if (annualDisplay) annualDisplay.innerText = formatCurrency(annualValue);
-            if (weeklyBleedDisplay) weeklyBleedDisplay.innerText = formatCurrency(weeklyBleed);
-            if (unitsRecoveredText) unitsRecoveredText.innerText = `${unitsRecovered} Estimated Funded Deliveries`;
-            
+        function updateMath() {
+            if (!leadsSlider || !profitSlider || !vehiclePriceSlider) return;
+            const leads = parseInt(leadsSlider.value, 10);
+            const profit = parseInt(profitSlider.value, 10);
+            const vehiclePrice = parseInt(vehiclePriceSlider.value, 10);
+
+            if (leadsVal) leadsVal.textContent = String(leads);
+            if (profitVal) profitVal.textContent = formatCurrency(profit);
+            if (vehiclePriceVal) vehiclePriceVal.textContent = formatCurrency(vehiclePrice);
+
+            // Funnel math: ~60% meet qualification & opt-in; ~40% of opt-ins convert (~25% of total referrals)
+            const qualifiedOptIns = Math.max(1, Math.round(leads * 0.60));
+            const unitsRecovered = Math.max(1, Math.round(leads * 0.25));
+
+            // Fee tier (all incl. VAT): R6,000 flat < R130k, 5.0% >= R130k
+            const isFlatTier = vehiclePrice < 130000;
+            const feePerUnit = isFlatTier ? 6000 : Math.round(vehiclePrice * 0.05);
+            const grossMonthly = unitsRecovered * profit;
+            const totalFee = unitsRecovered * feePerUnit;
+            const netMonthly = grossMonthly - totalFee;
+            const netAnnual = netMonthly * 12;
+            const weeklyNet = Math.round(netMonthly / 4);
+
+            if (feeTierBadge) {
+                feeTierBadge.textContent = isFlatTier
+                    ? 'Active fee tier: R 6,000 flat (incl. VAT) per funded delivery (under R130k)'
+                    : 'Active fee tier: 5.0% of Retail Selling Price (' + formatCurrency(feePerUnit) + ' incl. VAT per funded delivery)';
+            }
+
+            if (funnelLeads) funnelLeads.textContent = leads + '/mo';
+            if (funnelQualified) funnelQualified.textContent = qualifiedOptIns + '/mo';
+            if (funnelUnits) funnelUnits.textContent = unitsRecovered + (unitsRecovered === 1 ? ' unit' : ' units');
+
+            if (monthlyDisplay) {
+                monthlyDisplay.textContent = formatCurrency(netMonthly);
+                monthlyDisplay.className = netMonthly >= 0
+                    ? 'font-heading text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight'
+                    : 'font-heading text-4xl sm:text-5xl font-black text-rose-400 tracking-tight';
+            }
+            if (grossDisplay) grossDisplay.textContent = formatCurrency(grossMonthly);
+            if (feeTotalDisplay) feeTotalDisplay.textContent = '- ' + formatCurrency(totalFee);
+            if (netLedgerDisplay) netLedgerDisplay.textContent = formatCurrency(netMonthly);
+            if (annualDisplay) annualDisplay.textContent = formatCurrency(netAnnual);
+            if (weeklyBleedDisplay) weeklyBleedDisplay.textContent = formatCurrency(Math.max(0, weeklyNet));
+
+            if (unitsRecoveredText) {
+                unitsRecoveredText.textContent = unitsRecovered + ' Estimated Funded Deliveries (~40% of ' + qualifiedOptIns + ' qualified opt-ins)';
+            }
+
             if (dynamicBurnText) {
-                dynamicBurnText.innerHTML = `Referring <strong class="text-white">${leads} turned-down leads</strong> targets an indicative recovery of <strong class="text-emerald-400">${unitsRecovered} delivered units</strong> (~35%&ndash;40% qualified benchmark) back to your showroom floor&mdash;recapturing <span class="text-white font-bold">${formatCurrency(monthlyValue)}/month</span> in gross profit that would otherwise be permanently lost.`;
+                dynamicBurnText.textContent =
+                    'Referring ' + leads + ' declines (~' + qualifiedOptIns + ' qualified opt-ins) yields ~' +
+                    unitsRecovered + ' funded units/month: ' + formatCurrency(grossMonthly) +
+                    ' gross recovered minus ' + formatCurrency(totalFee) + ' CBF fee (incl. VAT) = ' +
+                    formatCurrency(netMonthly) + ' net profit retained.';
             }
         }
 
-        if (leadsSlider && profitSlider) {
-            leadsSlider.addEventListener('input', () => {
-                localStorage.setItem('cbf_declines', leadsSlider.value);
-                updateMath();
-            });
-            profitSlider.addEventListener('input', updateMath);
-            
-            if (declinesParam) {
-                const parsedLeads = parseInt(declinesParam, 10);
-                if (!isNaN(parsedLeads)) {
-                    leadsSlider.value = Math.min(100, Math.max(10, parsedLeads));
-                }
+        if (leadsSlider && profitSlider && vehiclePriceSlider) {
+            const prospect = window.CBF_PROSPECT || {};
+            if (prospect.declines) {
+                leadsSlider.value = String(Math.min(100, Math.max(10, prospect.declines)));
             }
+            if (prospect.marginK) {
+                const marginRand = Math.round(prospect.marginK * 1000);
+                profitSlider.value = String(Math.min(50000, Math.max(12000, Math.round(marginRand / 1000) * 1000)));
+            }
+
+            leadsSlider.addEventListener('input', updateMath);
+            profitSlider.addEventListener('input', updateMath);
+            vehiclePriceSlider.addEventListener('input', updateMath);
             updateMath();
         }
 
-        // Initialize Lucide Icons
         if (window.lucide) {
             lucide.createIcons();
         }

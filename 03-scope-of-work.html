@@ -163,7 +163,7 @@
                 <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
                 <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
                     <i data-lucide="building-2" class="w-3.5 h-3.5 text-blue-400"></i>
-                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Volkswagen Auto Group</span>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Your Dealership</span>
                 </div>
             </div>
 
@@ -214,7 +214,7 @@
                                 </span>
                                 <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
                             </a>
-                            <a href="05-recommendation-pilot.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                            <a href="05-next-steps.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
                                 <span class="flex items-center gap-2.5">
                                     <span class="w-5 h-5 rounded bg-pink-500/30 text-pink-300 font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
                                 </span>
@@ -223,9 +223,9 @@
                         </div>
 
                         <div class="pt-2 border-t border-white/10">
-                            <a href="05-recommendation-pilot.html#book-onboarding" class="w-full btn-gradient py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
-                                <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
-                                <span>Start Recovering Declined Customers</span>
+                            <a href="05-next-steps.html#activation-steps" class="w-full btn-gradient py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
+                                <i data-lucide="file-signature" class="w-3.5 h-3.5"></i>
+                                <span>Proceed to Agreement &amp; Activation</span>
                             </a>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
         <section class="space-y-5">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
                 <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                <span>STEP 01 • OPERATIONAL SCOPE OF WORK</span>
+                <span>STEP 01 &bull; OPERATIONAL SCOPE OF WORK</span>
             </div>
 
             <div class="space-y-4">
@@ -250,7 +250,7 @@
                     <span class="text-gradient-blue">Zero Extra F&amp;I Admin.</span>
                 </h1>
                 <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">
-                    A non-negotiable operational contract: exactly what <span class="text-white font-semibold" id="hero-dealership-name">Volkswagen Auto Group</span> receives, how individual F&amp;I referral links operate, what CBF handles off-site, and how responsibilities are divided with zero staff overhead.
+                    A non-negotiable operational contract: exactly what <span class="text-white font-semibold" id="hero-dealership-name">Your Dealership</span> receives, how individual F&amp;I referral links operate, what CBF handles off-site, and how responsibilities are divided with zero staff overhead.
                 </p>
             </div>
 
@@ -525,7 +525,7 @@
                             <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
                             <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
                             <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                            <span class="text-gray-400 font-mono text-[11px] ml-2 hidden sm:inline">portal.creditbuilderflow.co.za/volkswagen-auto/lead-insights</span>
+                            <span class="text-gray-400 font-mono text-[11px] ml-2 hidden sm:inline">portal.creditbuilderflow.co.za/<span class="dealer-slug-insert">your-dealership</span>/lead-insights</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="text-[10px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
@@ -617,7 +617,7 @@
                             <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
                             <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
                             <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                            <span class="text-gray-400 font-mono text-[11px] ml-2 hidden sm:inline">portal.creditbuilderflow.co.za/volkswagen-auto/pipeline</span>
+                            <span class="text-gray-400 font-mono text-[11px] ml-2 hidden sm:inline">portal.creditbuilderflow.co.za/<span class="dealer-slug-insert">your-dealership</span>/pipeline</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="text-[10px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
@@ -685,13 +685,13 @@
                         <span class="text-gray-400 font-medium">Filter by F&amp;I Desk:</span>
                         <div class="flex gap-1.5" id="fi-filter-buttons">
                             <button onclick="filterFiTable('all', this)" class="fi-filter-btn px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-300 font-semibold border border-blue-500/30">All F&amp;Is (Store Total)</button>
-                            <button onclick="filterFiTable('Johan Botha', this)" class="fi-filter-btn px-2.5 py-1 rounded-lg bg-white/5 text-gray-400 hover:text-white border border-white/10">Johan Botha (F&amp;I 1)</button>
+                            <button onclick="filterFiTable('Marcus Botha', this)" class="fi-filter-btn px-2.5 py-1 rounded-lg bg-white/5 text-gray-400 hover:text-white border border-white/10">Marcus Botha (F&amp;I 1)</button>
                             <button onclick="filterFiTable('Lerato Khumalo', this)" class="fi-filter-btn px-2.5 py-1 rounded-lg bg-white/5 text-gray-400 hover:text-white border border-white/10">Lerato Khumalo (F&amp;I 2)</button>
                         </div>
                     </div>
                     <div class="text-gray-400 flex items-center gap-1.5 text-[11px]">
                         <i data-lucide="refresh-cw" class="w-3 h-3 text-blue-400"></i>
-                        <span>Auto-synced with bureau dispute servers</span>
+                        <span>Updated from bureau dispute resolutions &amp; analyst reviews</span>
                     </div>
                 </div>
 
@@ -710,13 +710,13 @@
                         </thead>
                         <tbody class="divide-y divide-white/5" id="crm-table-body">
                             <!-- Lead 1: Ready to Desk -->
-                            <tr class="hover:bg-white/[0.02] transition-colors crm-lead-row" data-fi="Johan Botha">
+                            <tr class="hover:bg-white/[0.02] transition-colors crm-lead-row" data-fi="Marcus Botha">
                                 <td class="py-3.5 px-4 font-semibold text-white">
                                     M. Desegwane
-                                    <span class="block text-[10px] text-gray-400 font-normal">Ref: APX-0892</span>
+                                    <span class="block text-[10px] text-gray-400 font-normal">Ref: CBF-0892</span>
                                 </td>
                                 <td class="py-3.5 px-4">
-                                    <span class="text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded text-[11px]">Johan Botha</span>
+                                    <span class="text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded text-[11px]">Marcus Botha</span>
                                 </td>
                                 <td class="py-3.5 px-4 text-gray-400">
                                     WesBank &bull; Truworths Arrears + DTI
@@ -741,7 +741,7 @@
                             <tr class="hover:bg-white/[0.02] transition-colors crm-lead-row" data-fi="Lerato Khumalo">
                                 <td class="py-3.5 px-4 font-semibold text-white">
                                     J. Small
-                                    <span class="block text-[10px] text-gray-400 font-normal">Ref: APX-0897</span>
+                                    <span class="block text-[10px] text-gray-400 font-normal">Ref: CBF-0897</span>
                                 </td>
                                 <td class="py-3.5 px-4">
                                     <span class="text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded text-[11px]">Lerato Khumalo</span>
@@ -764,13 +764,13 @@
                             </tr>
 
                             <!-- Lead 3: Document Validation -->
-                            <tr class="hover:bg-white/[0.02] transition-colors crm-lead-row" data-fi="Johan Botha">
+                            <tr class="hover:bg-white/[0.02] transition-colors crm-lead-row" data-fi="Marcus Botha">
                                 <td class="py-3.5 px-4 font-semibold text-white">
                                     K. Zikode
-                                    <span class="block text-[10px] text-gray-400 font-normal">Ref: APX-0901</span>
+                                    <span class="block text-[10px] text-gray-400 font-normal">Ref: CBF-0901</span>
                                 </td>
                                 <td class="py-3.5 px-4">
-                                    <span class="text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded text-[11px]">Johan Botha</span>
+                                    <span class="text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded text-[11px]">Marcus Botha</span>
                                 </td>
                                 <td class="py-3.5 px-4 text-gray-400">
                                     Absa &bull; DTI / NSF Debit Bounces
@@ -779,10 +779,10 @@
                                     <span class="inline-flex items-center gap-1.5 text-amber-400 font-semibold bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full text-[11px]">
                                         <i data-lucide="file-check" class="w-3 h-3"></i> Diagnostic Complete
                                     </span>
-                                    <span class="block text-[10px] text-gray-400 pt-0.5">AI Affordability Engine re-balancing budget</span>
+                                    <span class="block text-[10px] text-gray-400 pt-0.5">Affordability engine re-balancing budget</span>
                                 </td>
                                 <td class="py-3.5 px-4 text-gray-300">
-                                    60–90 Days
+                                    60&ndash;90 Days
                                 </td>
                                 <td class="py-3.5 px-4 text-right">
                                     <span class="text-gray-400 text-[10px]">In Progress</span>
@@ -793,8 +793,9 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-400 pt-1">
-                    <div>
-                        💡 <strong class="text-gray-300">Non-Poaching Guarantee:</strong> All profiles are hardcoded to Volkswagen Auto Group. Re-routing or syndicating to external dealerships is blocked by system architecture.
+                    <div class="flex items-start gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span><strong class="text-gray-300">Non-Poaching Guarantee:</strong> All profiles are hardcoded to <span class="dealer-name-insert text-gray-200 font-semibold">Your Dealership</span>. Re-routing or syndicating to external dealerships is blocked by system architecture.</span>
                     </div>
                     <div class="text-[11px] text-gray-400">
                         Governed by POPIA Section 11 Direct Mandate
@@ -869,8 +870,10 @@
                                 Customer Consent &amp; POPIA Compliance
                                 <span class="block text-xs text-gray-400 font-normal">Legal mandate to process financial records</span>
                             </td>
-                            <td class="py-3.5 px-4 sm:px-6 text-center text-gray-500">
-                                ❌ Zero Involvement
+                            <td class="py-3.5 px-4 sm:px-6 text-center">
+                                <span class="inline-flex items-center gap-1 text-gray-500">
+                                    <i data-lucide="x" class="w-3.5 h-3.5 text-rose-400"></i> Zero Involvement
+                                </span>
                             </td>
                             <td class="py-3.5 px-4 sm:px-6 text-center">
                                 <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full text-xs">
@@ -881,11 +884,13 @@
 
                         <tr class="hover:bg-white/[0.02]">
                             <td class="py-3.5 px-4 sm:px-6 font-semibold text-white">
-                                3-Bureau Diagnostic &amp; Document Ingestion
-                                <span class="block text-xs text-gray-400 font-normal">Pulls TransUnion, Experian, XDS + 3m bank statements</span>
+                                Soft Bureau Check &amp; Document Ingestion
+                                <span class="block text-xs text-gray-400 font-normal">Consumer-mandated soft bureau check (zero credit-score impact) + 3m bank statements</span>
                             </td>
-                            <td class="py-3.5 px-4 sm:px-6 text-center text-gray-500">
-                                ❌ Zero Involvement
+                            <td class="py-3.5 px-4 sm:px-6 text-center">
+                                <span class="inline-flex items-center gap-1 text-gray-500">
+                                    <i data-lucide="x" class="w-3.5 h-3.5 text-rose-400"></i> Zero Involvement
+                                </span>
                             </td>
                             <td class="py-3.5 px-4 sm:px-6 text-center">
                                 <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full text-xs">
@@ -896,11 +901,13 @@
 
                         <tr class="hover:bg-white/[0.02]">
                             <td class="py-3.5 px-4 sm:px-6 font-semibold text-white">
-                                SACRRA Adverse Dispute &amp; Settlement
-                                <span class="block text-xs text-gray-400 font-normal">Filing legal disputes &amp; procuring paid-up letters</span>
+                                Statutory Adverse Dispute &amp; Settlement
+                                <span class="block text-xs text-gray-400 font-normal">Filing Section 71A/72 disputes &amp; procuring paid-up letters</span>
                             </td>
-                            <td class="py-3.5 px-4 sm:px-6 text-center text-gray-500">
-                                ❌ Zero Involvement
+                            <td class="py-3.5 px-4 sm:px-6 text-center">
+                                <span class="inline-flex items-center gap-1 text-gray-500">
+                                    <i data-lucide="x" class="w-3.5 h-3.5 text-rose-400"></i> Zero Involvement
+                                </span>
                             </td>
                             <td class="py-3.5 px-4 sm:px-6 text-center">
                                 <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full text-xs">
@@ -914,8 +921,10 @@
                                 Affordability &amp; DTI Restructuring
                                 <span class="block text-xs text-gray-400 font-normal">Clearing NSF flags &amp; recalibrating living expenses</span>
                             </td>
-                            <td class="py-3.5 px-4 sm:px-6 text-center text-gray-500">
-                                ❌ Zero Involvement
+                            <td class="py-3.5 px-4 sm:px-6 text-center">
+                                <span class="inline-flex items-center gap-1 text-gray-500">
+                                    <i data-lucide="x" class="w-3.5 h-3.5 text-rose-400"></i> Zero Involvement
+                                </span>
                             </td>
                             <td class="py-3.5 px-4 sm:px-6 text-center">
                                 <span class="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full text-xs">
@@ -947,8 +956,10 @@
                                     <i data-lucide="check" class="w-3.5 h-3.5"></i> Complete Dealer Control
                                 </span>
                             </td>
-                            <td class="py-3.5 px-4 sm:px-6 text-center text-gray-500">
-                                ❌ No Involvement
+                            <td class="py-3.5 px-4 sm:px-6 text-center">
+                                <span class="inline-flex items-center gap-1 text-gray-500">
+                                    <i data-lucide="x" class="w-3.5 h-3.5 text-rose-400"></i> No Involvement
+                                </span>
                             </td>
                         </tr>
 
@@ -1104,7 +1115,7 @@
             <div class="text-center pt-2 hidden sm:block">
                 <span class="text-xs text-gray-400">
                     Already satisfied with the operational framework? 
-                    <a href="05-recommendation-pilot.html#book-onboarding" class="text-pink-400 hover:text-pink-300 font-semibold underline underline-offset-4 ml-1">
+                    <a href="05-next-steps.html#activation-steps" class="text-pink-400 hover:text-pink-300 font-semibold underline underline-offset-4 ml-1">
                         Skip straight to Activate CBF &rarr;
                     </a>
                 </span>
@@ -1124,7 +1135,7 @@
                 <span class="font-extrabold text-white font-heading">Volve Media &bull; Credit Builder Flow</span>
             </div>
             <p class="text-[11px] text-gray-400">
-                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Volkswagen Auto Group</span>
+                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Your Dealership</span>
             </p>
             <p class="text-[11px] text-gray-400">
                 Questions or immediate operational briefings: 
@@ -1133,35 +1144,16 @@
         </div>
     </footer>
 
+    <!-- Shared Portal Personalization & Link Forwarding -->
+    <script src="portal-personalize.js"></script>
+
     <!-- INTERACTIVE SCRIPTS -->
     <script>
         // Initialize Lucide Icons
-        lucide.createIcons();
+        if (window.lucide) lucide.createIcons();
 
-        // Dynamic Dealership Name Insertion from URL Parameters or LocalStorage
-        const urlParams = new URLSearchParams(window.location.search);
-        const dealerParam = urlParams.get('dealer') || localStorage.getItem('cbf_dealer');
-        
-        if (dealerParam) {
-            const cleanDealerName = decodeURIComponent(dealerParam.replace(/\+/g, ' '));
-            const elements = [
-                document.getElementById('header-dealership-name'),
-                document.getElementById('hero-dealership-name'),
-                document.getElementById('footer-dealership-name')
-            ];
-            elements.forEach(el => {
-                if (el) el.textContent = cleanDealerName;
-            });
-        }
-
-        // Forward query params to all internal links
-        if (window.location.search) {
-            document.querySelectorAll('a[href$=".html"]').forEach(a => {
-                const href = a.getAttribute('href');
-                if (href && !href.includes('?') && !href.startsWith('http')) {
-                    a.setAttribute('href', href + window.location.search);
-                }
-            });
+        if (window.CBF_PERSONALIZE) {
+            window.CBF_PERSONALIZE.apply();
         }
 
         // Consolidated Menu Dropdown Interaction
@@ -1286,7 +1278,12 @@
             if (modal) {
                 if (imageSrc && modalImg) modalImg.src = imageSrc;
                 if (modalTitle && titleElem) {
-                    titleElem.innerHTML = `<i data-lucide="layout" class="w-4 h-4 text-blue-400"></i> ${modalTitle}`;
+                    titleElem.textContent = '';
+                    const layoutIcon = document.createElement('i');
+                    layoutIcon.setAttribute('data-lucide', 'layout');
+                    layoutIcon.className = 'w-4 h-4 text-blue-400';
+                    titleElem.appendChild(layoutIcon);
+                    titleElem.appendChild(document.createTextNode(' ' + modalTitle));
                 }
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';

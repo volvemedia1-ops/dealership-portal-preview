@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Microsoft Clarity Analytics & Prospect Intelligence -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yi9wab3vxv");
+    </script>
+    <script src="tracking.js"></script>
+    <!-- Favicon & Browser Tab Icons -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253">
+    <title>Step 06: Agreement &amp; Onboarding | Volve Media &times; Credit Builder Flow</title>
+    <meta name="description" content="Performance-only commercial terms, 3-step online activation, Dealership Portal registration, and Master Service Delivery Agreement review.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Volve Media Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0f',
+                            card: 'rgba(255, 255, 255, 0.03)',
+                            cardHover: 'rgba(255, 255, 255, 0.06)',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            pink: '#ec4899',
+                            rose: '#f43f5e',
+                            purple: '#9333ea',
+                            indigo: '#6366f1',
+                            emerald: '#10b981',
+                            amber: '#f59e0b',
+                            blue: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #e2e8f0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4); /* indigo-500 */
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px -10px rgba(99, 102, 241, 0.2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-indigo {
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #4338ca 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-emerald {
+            background: linear-gradient(135deg, #6ee7b7 0%, #10b981 50%, #047857 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+        }
+
+        .btn-gradient-indigo {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient-indigo:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.45);
+        }
+
+        .btn-gradient-emerald {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient-emerald:hover {
+            opacity: 0.95;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+        }
+
+        .ambient-blob {
+            position: fixed;
+            border-radius: 9999px;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.12;
+        }
+
+        .glass-header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(10, 10, 15, 0.60) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-indigo-500/30 selection:text-indigo-200">
+
+    <!-- Ambient Background Glow -->
+    <div class="ambient-blob w-[500px] h-[500px] bg-indigo-600 top-0 right-10"></div>
+    <div class="ambient-blob w-96 h-96 bg-emerald-600 bottom-1/3 left-10"></div>
+
+    <!-- STICKY TOP HEADER -->
+    <header class="relative z-30 glass-header sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 flex justify-between items-center">
+            <!-- Co-Branding & Back Link -->
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                         alt="Volve Media Logo" 
+                         class="h-8 w-auto rounded-lg shadow-sm" 
+                         loading="lazy">
+                    <div class="flex flex-col">
+                        <span class="text-base font-extrabold text-white tracking-tight font-heading leading-tight">
+                            Volve<span class="text-gradient">Media</span>
+                        </span>
+                        <span class="text-[9px] text-gray-400 font-semibold tracking-wider uppercase">Credit Builder Flow</span>
+                    </div>
+                </a>
+                <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
+                <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
+                    <i data-lucide="building-2" class="w-3.5 h-3.5 text-indigo-400"></i>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Your Dealership</span>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Consolidated Menu Toggle -->
+                <div class="relative">
+                    <button id="menu-toggle-btn" type="button" class="glass px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 hover:text-white flex items-center gap-2 border border-white/10 hover:border-indigo-500/30 transition-all focus:outline-none">
+                        <i data-lucide="menu" class="w-4 h-4 text-indigo-400"></i>
+                        <span>Menu</span>
+                        <i data-lucide="chevron-down" id="menu-chevron" class="w-3.5 h-3.5 text-gray-400 transition-transform"></i>
+                    </button>
+
+                    <!-- Consolidated Menu Dropdown Panel -->
+                    <div id="menu-dropdown" class="hidden absolute right-0 mt-2 w-72 sm:w-80 bg-brand-dark/95 border border-white/10 rounded-2xl shadow-2xl p-4 backdrop-blur-xl z-50 space-y-3">
+                        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">
+                            Portal Sections
+                        </div>
+
+                        <div class="space-y-1 text-xs">
+                            <a href="03-scope-of-work.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-[10px]">1</span> Scope of Work
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="02-solution-options.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-[10px]">2</span> The Solution
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="case-study.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-[10px]">3</span> Case Studies &amp; Timelines
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="04-risk-compliance.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-[10px]">4</span> Risk &amp; Protection
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="01-commercial-roi.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center text-[10px]">5</span> Revenue &amp; ROI
+                                </span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
+                            </a>
+                            <a href="05-next-steps.html" class="flex items-center justify-between p-2 rounded-lg bg-indigo-500/10 text-indigo-300 font-semibold border border-indigo-500/20">
+                                <span class="flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded bg-indigo-500 text-white font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
+                                </span>
+                                <span class="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Current</span>
+                            </a>
+                        </div>
+
+                        <div class="pt-2 border-t border-white/10">
+                            <a href="#activation-steps" class="w-full btn-gradient-indigo py-2 rounded-xl text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg">
+                                <i data-lucide="file-signature" class="w-3.5 h-3.5"></i>
+                                <span>Proceed to Agreement &amp; Activation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-16 space-y-16">
+
+        <!-- 1. HERO SECTION & STRATEGIC CONTEXT -->
+        <section class="space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                <span>STEP 06 &bull; COMMERCIAL EXECUTION &amp; ONBOARDING</span>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-heading leading-tight">
+                    Performance-Only Commercial Terms. <br class="hidden sm:inline">
+                    <span class="text-gradient-indigo">24-Hour Dealership Rollout.</span>
+                </h1>
+                <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">
+                    Review your performance fee schedule, follow the three-step online activation pathway, and inspect the Master Service Delivery Agreement for <span class="text-white font-semibold" id="hero-dealership-name">Your Dealership</span>.
+                </p>
+            </div>
+
+            <!-- Commercial Protection Badges -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-3">
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Upfront Capital</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white font-heading">R0.00</div>
+                    <div class="text-[11px] text-gray-400">Zero setup or onboarding fees</div>
+                </div>
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Monthly Retainer</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-emerald-400 font-heading">R0.00</div>
+                    <div class="text-[11px] text-gray-400">Zero recurring platform overhead</div>
+                </div>
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Fee Structure</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-indigo-400 font-heading">Contingency</div>
+                    <div class="text-[11px] text-gray-400">R6k flat (&lt;R130k) / 5% (&ge;R130k)</div>
+                </div>
+                <div class="glass p-4 rounded-xl border border-white/5 space-y-1">
+                    <div class="text-xs text-gray-400">Commitment Term</div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-purple-400 font-heading">Month-to-Month</div>
+                    <div class="text-[11px] text-gray-400">30-day notice &bull; Zero exit penalty</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. COMMERCIAL SERVICE AGREEMENT SUMMARY (RATE CARD) -->
+        <section class="glass p-6 sm:p-10 rounded-3xl border border-indigo-500/20 space-y-8 relative overflow-hidden">
+            <div class="ambient-blob w-80 h-80 bg-indigo-600 top-0 right-0 opacity-10"></div>
+            
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Commercial Transparency</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                    Commercial Commitment Schedule
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-300 max-w-2xl">
+                    Performance-only commercial architecture designed to ensure our incentives are directly aligned with your sales floor.
+                </p>
+            </div>
+
+            <!-- Rate Card Table -->
+            <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                <div class="divide-y divide-white/5 text-xs sm:text-sm">
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Monthly Retainer &amp; Platform License</span>
+                            <p class="text-xs text-gray-400">Unlimited F&amp;I desk access, automated tracking, and pipeline dashboard.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-white font-heading">R0.00 / month</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Upfront Setup, Technical Onboarding &amp; Staff Training</span>
+                            <p class="text-xs text-gray-400">Custom referral link generation, individual F&amp;I attribution tagging, and training kit.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-white font-heading">R0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Financial Cost If Zero Leads Are Recovered</span>
+                            <p class="text-xs text-gray-400">Complete downside insulation. The dealership bears zero balance-sheet risk.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-base sm:text-lg font-extrabold text-emerald-400 font-heading">R0.00 — No Upfront Financial Commitment</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-start gap-4 bg-indigo-500/10 border-t border-b border-indigo-500/20">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="font-extrabold text-white text-sm sm:text-base">Contingency Performance Rate Card</span>
+                                <span class="text-[10px] bg-indigo-500 text-white font-bold px-2 py-0.5 rounded uppercase">Pay on Delivery</span>
+                            </div>
+                            <div class="space-y-1.5 text-xs text-indigo-200">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400 shrink-0"></i>
+                                    <span><strong class="text-white">Vehicles Under R130,000:</strong> <span class="text-indigo-300 font-bold">R6,000 flat fee (incl. VAT)</span> &bull; Protects margin on budget stock.</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400 shrink-0"></i>
+                                    <span><strong class="text-white">Vehicles R130,000 and Above:</strong> <span class="text-indigo-300 font-bold">5.0% of Retail Selling Price (incl. VAT)</span> &bull; Aligned with higher gross &amp; F&amp;I commissions.</span>
+                                </div>
+                            </div>
+                            <p class="text-[11px] text-gray-400 pt-1">
+                                Invoiced strictly on statement <strong class="text-white">after</strong> the bank has funded the deal and the customer has taken delivery.
+                            </p>
+                        </div>
+                        <div class="text-left sm:text-right shrink-0">
+                            <span class="text-lg sm:text-xl font-extrabold text-indigo-300 font-heading">R6,000 / 5.0%</span>
+                            <span class="block text-[10px] text-gray-400">(Both incl. VAT &bull; Pay strictly on delivery)</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-white/[0.02] transition-colors">
+                        <div class="space-y-0.5">
+                            <span class="font-bold text-white">Agreement Term &amp; Termination</span>
+                            <p class="text-xs text-gray-400">Flexibility without lock-in. Either party may exit with written notice.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-sm sm:text-base font-bold text-gray-200">Month-to-Month</span>
+                            <span class="block text-[10px] text-gray-400">30 Days Notice &bull; Zero Exit Fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. THE 3-STEP ACTIVATION PATH -->
+        <section class="space-y-8">
+            <div class="border-b border-white/10 pb-4">
+                <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Fast Execution &bull; Zero Software Installs</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
+                    How Your Dealership Goes Live in 3 Steps
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1">
+                    No API integrations, no DMS changes, and zero IT tickets. Complete the steps below whenever your team is ready.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                
+                <!-- Step 1 -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 relative group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-extrabold text-base">
+                        01
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-white font-heading">Review &amp; Sign Master Service Agreement</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Inspect all clauses in the Review &amp; Execution Copy, then complete electronic execution online at <code class="bg-black/40 px-1 py-0.5 rounded text-indigo-300">agreement.volvemedia.com</code>.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 space-y-1.5 text-[11px] text-gray-400">
+                        <div class="flex items-center gap-1.5 text-indigo-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Exclusivity guaranteed under Clause 2.2</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-indigo-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Direct POPIA compliance under Clause 7.1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 relative group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-extrabold text-base">
+                        02
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-white font-heading">Complete Dealership Portal Registration</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Once signed, register your dealership and F&amp;I managers on <code class="bg-black/40 px-1 py-0.5 rounded text-blue-300">creditbuilderflow.co.za/dealerships</code> to receive your unique F&amp;I referral links immediately.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 space-y-1.5 text-[11px] text-gray-400">
+                        <div class="flex items-center gap-1.5 text-blue-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Unique tracking link per F&amp;I desk</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-blue-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Instant self-serve provisioning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 relative group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-extrabold text-base">
+                        03
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-white font-heading">Launch with Your F&amp;I Team</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            F&amp;I managers share the referral link with declined buyers via WhatsApp, email, or any other channel. CBF executes rehabilitation off-site and returns finance-ready buyers exclusively to your floor.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-white/5 space-y-1.5 text-[11px] text-gray-400">
+                        <div class="flex items-center gap-1.5 text-emerald-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Zero DMS installation required</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-emerald-300">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            <span>Real-time status notifications</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. DIRECT ONLINE EXECUTION & PORTAL REGISTRATION -->
+        <section id="activation-steps" class="glass p-6 sm:p-10 rounded-3xl border border-white/10 space-y-8 relative overflow-hidden">
+            <div class="ambient-blob w-80 h-80 bg-indigo-600 top-0 left-0 opacity-10"></div>
+            
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Ready to Activate</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                    Next Steps: Sign Online &amp; Issue F&amp;I Referral Links
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-300 max-w-2xl">
+                    Complete execution directly online at your convenience, or message our partnerships desk on WhatsApp if your team needs any assistance with setup.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Steps 1 & 2 Direct Launchpad (Left 2 cols) -->
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <!-- Action Card 1: Sign MSA -->
+                    <div class="glass-card p-6 rounded-2xl border border-indigo-500/30 bg-indigo-500/[0.04] flex flex-col justify-between space-y-5">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                                    Step 01 &bull; Execute MSA
+                                </span>
+                                <i data-lucide="file-signature" class="w-5 h-5 text-indigo-400"></i>
+                            </div>
+                            <h3 class="text-lg font-extrabold text-white font-heading">
+                                Review &amp; Sign Master Service Agreement
+                            </h3>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Authorised signatory completes the digital Master Service Agreement (v2.1-Volve-CBF) online in under 2 minutes. Immediately upon signing, you are redirected to register your F&amp;I team.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2.5 pt-2 border-t border-white/10">
+                            <a href="https://agreement.volvemedia.com" target="_blank" rel="noopener noreferrer"
+                               class="w-full btn-gradient-indigo py-3 px-4 rounded-xl text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg hover:brightness-110 transition-all">
+                                <i data-lucide="pen-tool" class="w-4 h-4"></i>
+                                <span>Review &amp; Sign Master Service Agreement</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                            <a href="dealership-service-agreement.html"
+                               class="w-full py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white text-[11px] font-semibold flex items-center justify-center gap-1.5 border border-white/10 transition-all">
+                                <i data-lucide="file-text" class="w-3.5 h-3.5 text-indigo-400"></i>
+                                <span>Inspect Full Agreement Copy First</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Action Card 2: Register Dealership Portal -->
+                    <div class="glass-card p-6 rounded-2xl border border-blue-500/30 bg-blue-500/[0.04] flex flex-col justify-between space-y-5">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                                    Step 02 &bull; F&amp;I Links
+                                </span>
+                                <i data-lucide="layout-dashboard" class="w-5 h-5 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg font-extrabold text-white font-heading">
+                                Complete Dealership Portal Registration
+                            </h3>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                Once your Master Service Agreement is signed, register your store and F&amp;I managers on the Credit Builder Flow dealership portal to generate unique tracking links immediately.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2.5 pt-2 border-t border-white/10">
+                            <a href="https://creditbuilderflow.co.za/dealerships" target="_blank" rel="noopener noreferrer"
+                               class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition-all">
+                                <i data-lucide="user-plus" class="w-4 h-4"></i>
+                                <span>Register on Dealership Portal</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                            <p class="text-[10px] text-gray-400 text-center">
+                                Share your unique F&amp;I link via WhatsApp, email, or any other channel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 / Direct WhatsApp Support Line (Right 1 col) -->
+                <div class="glass-card p-6 sm:p-7 rounded-2xl border border-emerald-500/25 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                Step 03 &bull; Launch &amp; Support
+                            </span>
+                            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                                <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-base font-bold text-white font-heading">
+                            Launch with F&amp;I &bull; Direct Support Line
+                        </h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Once your referral links are active, share them whenever a buyer is declined. Need a walkthrough for your F&amp;I desk or have a legal question? Message Kea directly on WhatsApp.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <a href="https://wa.me/27794762500?text=Hi%20Volve%20Media,%20we%20reviewed%20the%20Credit%20Builder%20Flow%20portal%20and%20have%20a%20question%20about%20getting%20our%20dealership%20activated." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="w-full btn-gradient-emerald py-3 rounded-xl text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg hover:brightness-110 transition-all">
+                            <i data-lucide="phone-forwarded" class="w-4 h-4"></i>
+                            <span>WhatsApp Support (+27 79 476 2500)</span>
+                        </a>
+                        <p class="text-[10px] text-gray-400 text-center">
+                            Direct Partnerships Line: +27 79 476 2500 &bull; volve@volvemedia.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LEGAL & GOVERNANCE TRANSPARENCY (REVIEW & EXECUTION COPY) -->
+        <section class="p-6 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/10 border-l-4 border-l-indigo-500 shadow-xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                <div class="space-y-1.5 max-w-2xl">
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-bold text-indigo-400 uppercase tracking-wider">
+                        <i data-lucide="scale" class="w-4 h-4"></i>
+                        <span>Legal &amp; Governance Transparency</span>
+                        <span class="text-[10px] bg-emerald-500/15 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30 font-bold uppercase">Review &amp; Execution Copy (v2.1-Volve-CBF)</span>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-white font-heading">
+                        Master Service Delivery Agreement
+                    </h2>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Inspect every clause of the Master Service Delivery Agreement directly in this portal, then proceed to sign online. Every clause protects your showroom floor (Clause 2.2 exclusivity) and insulates your dealership under direct POPIA Section 11 consumer consent (Clause 7.1).
+                    </p>
+                </div>
+
+                <!-- Primary Action: View Service Agreement & Sign Buttons -->
+                <div class="shrink-0 flex flex-col sm:flex-row gap-2.5">
+                    <a href="dealership-service-agreement.html" 
+                       class="glass px-5 py-3.5 rounded-xl text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/15 hover:border-indigo-400/50 transition-all">
+                        <i data-lucide="file-text" class="w-4 h-4 text-indigo-400"></i>
+                        <span>Read Full Clauses</span>
+                    </a>
+                    <a href="https://agreement.volvemedia.com" target="_blank" rel="noopener noreferrer"
+                       class="btn-gradient-indigo px-6 py-3.5 rounded-xl text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all group">
+                        <span>Review &amp; Sign Agreement</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. DUAL-DIRECTION BOTTOM NAVIGATION -->
+        <section class="border-t border-white/10 pt-10 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Direction 1: Back to Step 05 (Revenue & ROI) -->
+                <a href="01-commercial-roi.html" class="glass px-6 py-4 rounded-2xl hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all flex flex-col items-center justify-center space-y-1 group">
+                    <span class="text-xs text-gray-400 flex items-center gap-1.5 group-hover:text-gray-300 transition-colors">
+                        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                        <span>Previous Evaluation Step</span>
+                    </span>
+                    <span class="text-sm font-bold text-white font-heading">
+                        Back to Step 05: Revenue &amp; ROI
+                    </span>
+                </a>
+
+                <!-- Direction 2: Return to Portal Home -->
+                <a href="index.html" class="btn-gradient px-6 py-4 rounded-2xl text-center shadow-xl hover:scale-[1.02] transition-all flex flex-col items-center justify-center space-y-1">
+                    <span class="text-xs text-white/80 flex items-center gap-1.5">
+                        <span>Evaluation Complete</span>
+                        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                    </span>
+                    <span class="text-sm font-extrabold text-white font-heading">
+                        Return to Portal Home
+                    </span>
+                </a>
+            </div>
+
+            <div class="text-center pt-2">
+                <span class="text-xs text-gray-400">
+                    Need to inspect the full contract first? 
+                    <a href="dealership-service-agreement.html" class="text-indigo-400 hover:text-indigo-300 font-semibold underline underline-offset-4 ml-1">
+                        Open Master Service Agreement Review Copy &rarr;
+                    </a>
+                </span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative z-20 border-t border-white/10 bg-brand-dark/90 py-8 text-center text-xs text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center gap-2">
+                <img src="https://ik.imagekit.io/d95z4pprgm/Favicon%20-%20black-Photoroom.png?updatedAt=1747949542253" 
+                     alt="Volve Media Logo" 
+                     class="h-5 w-auto rounded opacity-80" 
+                     loading="lazy">
+                <span class="font-extrabold text-white font-heading">Volve Media &bull; Credit Builder Flow</span>
+            </div>
+            <p class="text-[11px] text-gray-400">
+                Confidential B2B Commercial Decision Portal &bull; Exclusively Prepared for <span id="footer-dealership-name" class="text-gray-300 font-medium">Your Dealership</span>
+            </p>
+            <p class="text-[11px] text-gray-400">
+                Questions or operational inquiries: 
+                <a href="mailto:volve@volvemedia.com" class="text-indigo-400 hover:text-indigo-300 font-semibold underline">volve@volvemedia.com</a>
+                &bull; WhatsApp: 
+                <a href="https://wa.me/27794762500" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold underline">+27 79 476 2500</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Shared Portal Personalization & Link Forwarding -->
+    <script src="portal-personalize.js"></script>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        if (window.lucide) lucide.createIcons();
+
+        // Consolidated Menu Dropdown Interaction
+        const menuBtn = document.getElementById('menu-toggle-btn');
+        const menuDropdown = document.getElementById('menu-dropdown');
+        const menuChevron = document.getElementById('menu-chevron');
+
+        if (menuBtn && menuDropdown) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = menuDropdown.classList.contains('hidden');
+                if (isHidden) {
+                    menuDropdown.classList.remove('hidden');
+                    if (menuChevron) menuChevron.classList.add('rotate-180');
+                } else {
+                    menuDropdown.classList.add('hidden');
+                    if (menuChevron) menuChevron.classList.remove('rotate-180');
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!menuDropdown.contains(e.target) && !menuBtn.contains(e.target)) {
+                    menuDropdown.classList.add('hidden');
+                    if (menuChevron) menuChevron.classList.remove('rotate-180');
+                }
+            });
+        }
+
+        if (window.CBF_PERSONALIZE) {
+            window.CBF_PERSONALIZE.apply();
+        }
+    </script>
+</body>
+</html>

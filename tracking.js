@@ -6,29 +6,55 @@
 (function() {
     'use strict';
 
-    // 1. Prospect Data Extraction & Persistence
+    var KEYS = ['dealer', 'contact', 'dp', 'date', 'declines', 'margin', 'banks', 'concern'];
+    var STALE_DEFAULTS = {
+        'Volkswagen Auto Group': true,
+        'Johan Van Der Merwe': true,
+        'Johan Botha': true,
+        'Apex Auto Group': true
+    };
+
+    function sanitizeParam(val) {
+        if (val === null || val === undefined) return '';
+        var str = String(val).replace(/\+/g, ' ').trim();
+        return STALE_DEFAULTS[str] ? '' : str;
+    }
+
+    // 1. Prospect Data Extraction (read-only; portal-personalize.js manages persistence)
     function getProspectInfo() {
         try {
+            if (window.CBF_PROSPECT) {
+                return {
+                    dealer: window.CBF_PROSPECT.displayDealer || 'Your Dealership',
+                    contact: window.CBF_PROSPECT.contact || window.CBF_PROSPECT.dp || 'Executive Team',
+                    declines: String(window.CBF_PROSPECT.declinesForMath || '25'),
+                    concern: window.CBF_PROSPECT.concern || ''
+                };
+            }
+
             var params = new URLSearchParams(window.location.search);
-            var dealerParam = params.get('dealer');
-            var contactParam = params.get('contact');
-            var declinesParam = params.get('declines');
+            var resetVal = (params.get('reset') || '').toLowerCase();
+            var isReset = (resetVal === '1' || resetVal === 'true');
 
-            if (dealerParam) localStorage.setItem('cbf_dealer', decodeURIComponent(dealerParam.replace(/\+/g, ' ')));
-            if (contactParam) localStorage.setItem('cbf_contact', decodeURIComponent(contactParam.replace(/\+/g, ' ')));
-            if (declinesParam) localStorage.setItem('cbf_declines', declinesParam);
+            function readField(key) {
+                if (params.has(key)) return sanitizeParam(params.get(key));
+                if (isReset) return '';
+                return sanitizeParam(localStorage.getItem('cbf_' + key));
+            }
 
-            var dealer = localStorage.getItem('cbf_dealer') || 'General Prospect';
-            var contact = localStorage.getItem('cbf_contact') || 'Executive Contact';
-            var declines = localStorage.getItem('cbf_declines') || '25';
+            var dealer = readField('dealer') || 'Your Dealership';
+            var contact = readField('contact') || readField('dp') || 'Executive Team';
+            var declines = readField('declines') || '25';
+            var concern = readField('concern') || '';
 
             return {
                 dealer: dealer,
                 contact: contact,
-                declines: declines
+                declines: declines,
+                concern: concern
             };
         } catch (e) {
-            return { dealer: 'General Prospect', contact: 'Executive Contact', declines: '25' };
+            return { dealer: 'Your Dealership', contact: 'Executive Team', declines: '25', concern: '' };
         }
     }
 
@@ -37,11 +63,14 @@
         if (typeof window.clarity !== 'function') return;
 
         var prospect = getProspectInfo();
-        
+
         // Set custom tags searchable and filterable in Clarity Dashboard
         window.clarity('set', 'Dealership', prospect.dealer);
         window.clarity('set', 'ExecutiveContact', prospect.contact);
         window.clarity('set', 'MonthlyDeclines', prospect.declines);
+        if (prospect.concern) {
+            window.clarity('set', 'PrimaryConcern', prospect.concern);
+        }
         window.clarity('set', 'PageTitle', document.title);
 
         // Identify prospect friendly name for session recordings
@@ -69,9 +98,17 @@
         if (href.indexOf('wa.me') !== -1) {
             window.clarity('event', 'click_whatsapp_contact');
         }
-        // Onboarding / Booking Schedule Clicks
-        else if (href.indexOf('book-onboarding') !== -1 || text.indexOf('book') !== -1 || text.indexOf('schedule') !== -1) {
-            window.clarity('event', 'click_book_onboarding');
+        // Online MSA Execution Clicks
+        else if (href.indexOf('agreement.volvemedia.com') !== -1 || text.indexOf('review & sign') !== -1) {
+            window.clarity('event', 'click_sign_agreement');
+        }
+        // Dealership Portal Registration Clicks
+        else if (href.indexOf('creditbuilderflow.co.za/dealerships') !== -1) {
+            window.clarity('event', 'click_register_dealership_portal');
+        }
+        // Next Steps / Activation Path Clicks
+        else if (href.indexOf('05-next-steps') !== -1 || href.indexOf('activation-steps') !== -1) {
+            window.clarity('event', 'click_next_steps');
         }
         // Master Service Agreement Inspection
         else if (href.indexOf('dealership-service-agreement') !== -1 || text.indexOf('agreement') !== -1) {
@@ -89,8 +126,9 @@
 
     // 4. ROI Calculator Interaction Tracking (if on 01-commercial-roi.html)
     document.addEventListener('DOMContentLoaded', function() {
-        var leadsSlider = document.getElementById('declines-slider');
-        var profitSlider = document.getElementById('profit-slider');
+        var leadsSlider = document.getElementById('leads') || document.getElementById('declines-slider');
+        var profitSlider = document.getElementById('profit') || document.getElementById('profit-slider');
+        var vehiclePriceSlider = document.getElementById('vehicle-price');
 
         if (leadsSlider) {
             leadsSlider.addEventListener('change', function() {
@@ -105,6 +143,15 @@
             profitSlider.addEventListener('change', function() {
                 if (typeof window.clarity === 'function') {
                     window.clarity('event', 'adjusted_profit_slider');
+                    window.clarity('set', 'CalculatedProfitPerUnit', profitSlider.value);
+                }
+            });
+        }
+
+        if (vehiclePriceSlider) {
+            vehiclePriceSlider.addEventListener('change', function() {
+                if (typeof window.clarity === 'function') {
+                    window.clarity('event', 'adjusted_vehicle_price_slider');
                 }
             });
         }

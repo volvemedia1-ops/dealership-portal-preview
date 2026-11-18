@@ -145,7 +145,7 @@
                 <span class="text-gray-600 text-lg font-light hidden sm:inline">/</span>
                 <div class="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
                     <i data-lucide="building-2" class="w-3.5 h-3.5 text-pink-400"></i>
-                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Volkswagen Auto Group</span>
+                    <span id="header-dealership-name" class="text-xs font-semibold text-gray-200">Your Dealership</span>
                 </div>
             </div>
 
@@ -195,7 +195,7 @@
                             </span>
                             <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-500"></i>
                         </a>
-                        <a href="05-recommendation-pilot.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
+                        <a href="05-next-steps.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5 text-gray-300 hover:text-white transition-colors">
                             <span class="flex items-center gap-2.5">
                                 <span class="w-5 h-5 rounded bg-pink-500/30 text-pink-300 font-bold flex items-center justify-center text-[10px]">6</span> Agreement &amp; Terms
                             </span>
@@ -205,7 +205,7 @@
 
                     <!-- Consolidated Primary CTA inside the Menu -->
                     <div class="pt-2 border-t border-white/10">
-                        <a href="05-recommendation-pilot.html" class="btn-gradient text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 w-full text-center shadow-md">
+                        <a href="05-next-steps.html" class="btn-gradient text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 w-full text-center shadow-md">
                             <span>Start Recovering Declined Customers</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -222,16 +222,16 @@
         <section class="space-y-4">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-xs font-medium text-gray-300">
                 <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-                <span>Briefing Completed &bull; Your Decision Pack</span>
+                <span>Commercial Review Pack &bull; Option Ready</span>
             </div>
 
             <div class="space-y-3 max-w-3xl">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white tracking-tight leading-tight">
                     Thank You For Your Time, <br/>
-                    <span id="hero-contact-name" class="text-gradient">Johan &amp; The Volkswagen Team</span>.
+                    <span id="hero-contact-name" class="text-gradient">Your Dealership Team</span>.
                 </h1>
-                <p class="text-sm sm:text-base text-gray-300 font-normal leading-relaxed">
-                    Following our briefing regarding <span id="hero-dealership-name" class="text-white font-semibold">Volkswagen Auto Group</span>'s finance declines across WesBank, MFC, Absa, and Standard Bank, this portal provides the commercial and operational review pack to activate CBF across your floor.
+                <p id="hero-intro" class="text-sm sm:text-base text-gray-300 font-normal leading-relaxed">
+                    Following our meeting<span id="hero-intro-contact"></span><span id="hero-intro-date"></span> regarding <span id="hero-dealership-name" class="text-white font-semibold">Your Dealership</span>'s finance declines across <span id="hero-intro-banks" class="text-gray-200 font-medium">your lenders</span>, this portal sets out the commercial terms, operational scope and agreement for your review.
                 </p>
             </div>
 
@@ -239,11 +239,11 @@
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
                 <div class="glass p-3 rounded-xl">
                     <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Dealership</span>
-                    <span id="meta-dealership" class="text-xs sm:text-sm font-bold text-white mt-0.5 block truncate">Volkswagen Auto Group</span>
+                    <span id="meta-dealership" class="text-xs sm:text-sm font-bold text-white mt-0.5 block truncate">Your Dealership</span>
                 </div>
                 <div class="glass p-3 rounded-xl">
                     <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Executive Contact</span>
-                    <span id="meta-contact" class="text-xs sm:text-sm font-bold text-white mt-0.5 block truncate">Johan Van Der Merwe</span>
+                    <span id="meta-contact" class="text-xs sm:text-sm font-bold text-white mt-0.5 block truncate">Executive Team</span>
                 </div>
                 <div class="glass p-3 rounded-xl">
                     <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">Monthly Declines</span>
@@ -256,12 +256,12 @@
             </div>
         </section>
 
-        <!-- WRITTEN MEETING RECAP -->
+        <!-- WRITTEN MEETING RECAP (OPTION A1) -->
         <section class="glass-card rounded-2xl p-6 sm:p-7 border-l-4 border-l-pink-500 relative overflow-hidden">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-5 pb-4 border-b border-white/10">
                 <div class="flex items-center gap-2 text-pink-400 text-xs uppercase font-bold tracking-wider">
                     <i data-lucide="file-text" class="w-4 h-4"></i>
-                    <span>Discussion Summary</span>
+                    <span id="discussion-summary-heading">Discussion Summary</span>
                 </div>
                 <div class="text-rose-400 text-xs font-semibold flex items-center gap-1.5">
                     <i data-lucide="trending-down" class="w-3.5 h-3.5"></i>
@@ -269,16 +269,16 @@
                 </div>
             </div>
 
-            <!-- 3 Concise Recap Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm">
+            <!-- Option A1 Recap Cards (3 cols default, 2x2 cols when Point Raised card is visible) -->
+            <div id="recap-cards-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm">
                 <!-- Point 1 -->
                 <div class="space-y-1.5">
                     <div class="flex items-center gap-2 text-white font-semibold text-xs sm:text-sm">
                         <span class="w-5 h-5 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center text-[11px] font-bold">1</span>
                         <span>The Opportunity</span>
                     </div>
-                    <p class="text-gray-400 leading-relaxed text-xs">
-                        Losing ~<strong class="text-gray-200">25 motivated buyers monthly</strong> to credit declines (worth R15k–R20k gross per deal). These are currently written off with no structured follow-up.
+                    <p id="card-opportunity-body" class="text-gray-400 leading-relaxed text-xs">
+                        <span id="opp-lead-prefix"></span><span id="opp-dealer-name" class="text-gray-200 font-semibold">Your Dealership</span> sees approximately <strong id="opp-declines-count" class="text-gray-200">25 finance declines per month</strong>. <span id="opp-margin-sentence">At R15k–R20k gross per deal, that is up to <strong class="text-gray-200">R375k–R500k per month</strong> in unrealised gross, currently written off without a structured follow-up.</span>
                     </p>
                 </div>
 
@@ -289,7 +289,7 @@
                         <span>Minimal Staff Involvement</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-xs">
-                        F&amp;I simply hands over a <strong class="text-gray-200">10-second referral link</strong>. All dispute filings, credit counseling, and rehabilitation are handled off-site.
+                        Your F&amp;I team shares a referral link with declined buyers via <strong class="text-gray-200">WhatsApp, email or any other channel</strong>. All credit rehabilitation is handled by CBF, off-site.
                     </p>
                 </div>
 
@@ -300,8 +300,17 @@
                         <span>Pay On Results Only</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-xs">
-                        <strong class="text-gray-200">R0 monthly retainer.</strong> Contingency fee of <strong class="text-emerald-400">R6k flat (&lt;R130k) / 5% (&ge;R130k)</strong> paid strictly after a recovered deal is funded by the bank.
+                        <strong class="text-gray-200">R0 retainer.</strong> <strong class="text-emerald-400">R6,000 flat (incl. VAT)</strong> for vehicles under R130,000; <strong class="text-emerald-400">5% (incl. VAT)</strong> for vehicles at R130,000 and above. Payable only per delivered vehicle.
                     </p>
+                </div>
+
+                <!-- Conditional Point 4: Point Raised In Our Meeting -->
+                <div id="concern-card" class="hidden space-y-1.5 bg-white/[0.03] border border-pink-500/20 rounded-xl p-3.5">
+                    <div class="flex items-center gap-2 text-white font-semibold text-xs sm:text-sm">
+                        <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center text-xs font-bold">4</span>
+                        <span>Point Raised In Our Meeting</span>
+                    </div>
+                    <p id="concern-card-body" class="text-gray-300 leading-relaxed text-xs"></p>
                 </div>
             </div>
         </section>
@@ -456,8 +465,8 @@
                     </div>
                 </a>
 
-                <!-- STEP 6: AGREEMENT & ONBOARDING -->
-                <a href="05-recommendation-pilot.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative border-pink-500/30 bg-gradient-to-br from-pink-500/5 via-brand-dark to-purple-500/5">
+                <!-- STEP 6: AGREEMENT & NEXT STEPS -->
+                <a href="05-next-steps.html" class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative border-pink-500/30 bg-gradient-to-br from-pink-500/5 via-brand-dark to-purple-500/5">
                     <div class="space-y-3">
                         <div class="flex justify-between items-start">
                             <!-- Clean Number 6 Badge -->
@@ -473,7 +482,7 @@
                                 <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-pink-400"></i>
                             </h3>
                             <p class="text-xs text-gray-300 mt-1 leading-relaxed">
-                                Performance rate card terms and activating your custom referral link.
+                                Performance rate card terms, online Master Service Agreement, and dealership portal registration.
                             </p>
                         </div>
                     </div>
@@ -497,7 +506,7 @@
                 <p class="text-xs text-gray-400">No monthly retainers. No software subscriptions. You only pay after a recovered customer takes delivery.</p>
             </div>
             <div class="shrink-0 w-full sm:w-auto">
-                <a href="05-recommendation-pilot.html" class="btn-gradient w-full sm:w-auto text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl text-center shadow-lg flex items-center justify-center gap-2">
+                <a href="05-next-steps.html" class="btn-gradient w-full sm:w-auto text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl text-center shadow-lg flex items-center justify-center gap-2">
                     <span>Start Recovering Declined Customers</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
@@ -518,10 +527,13 @@
 
     </main>
 
-    <!-- Interactive Dropdown Toggle & Dynamic Ingestion Script -->
+    <!-- Shared Portal Personalization & Link Forwarding -->
+    <script src="portal-personalize.js"></script>
+
+    <!-- Interactive Dropdown Toggle & Option A1 Rendering -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
+            if (window.lucide) lucide.createIcons();
 
             const toggleBtn = document.getElementById('menu-toggle-btn');
             const dropdown = document.getElementById('menu-dropdown');
@@ -547,57 +559,140 @@
                 });
             }
 
-            // Dynamic Dealership Personalization from URL or LocalStorage
-            const urlParams = new URLSearchParams(window.location.search);
-            const dealerParam = urlParams.get('dealer');
-            const contactParam = urlParams.get('contact');
-            const declinesParam = urlParams.get('declines');
+            const p = window.CBF_PROSPECT || {
+                dealer: '',
+                displayDealer: 'Your Dealership',
+                contact: '',
+                dp: '',
+                date: '',
+                declines: null,
+                declinesForMath: 25,
+                marginK: null,
+                banks: '',
+                concern: ''
+            };
 
-            // Retrieve from localStorage or fallback
-            const savedDealer = localStorage.getItem('cbf_dealer');
-            const savedContact = localStorage.getItem('cbf_contact');
-            const savedDeclines = localStorage.getItem('cbf_declines');
-
-            const dealerName = dealerParam ? decodeURIComponent(dealerParam.replace(/\+/g, ' ')) : (savedDealer || "Volkswagen Auto Group");
-            const contactName = contactParam ? decodeURIComponent(contactParam.replace(/\+/g, ' ')) : (savedContact || "Johan Van Der Merwe");
-            const declines = declinesParam ? parseInt(declinesParam, 10) : (savedDeclines ? parseInt(savedDeclines, 10) : 25);
-
-            // Store in localStorage for seamless browsing across all 11 pages
-            if (dealerParam) localStorage.setItem('cbf_dealer', dealerName);
-            if (contactParam) localStorage.setItem('cbf_contact', contactName);
-            if (declinesParam) localStorage.setItem('cbf_declines', declines);
-
-            // Update DOM elements with customized text
-            const headerDealer = document.getElementById('header-dealership-name');
-            if (headerDealer) headerDealer.innerText = dealerName;
-            const heroDealer = document.getElementById('hero-dealership-name');
-            if (heroDealer) heroDealer.innerText = dealerName;
-            const metaDealer = document.getElementById('meta-dealership');
-            if (metaDealer) metaDealer.innerText = dealerName;
-
-            const heroContact = document.getElementById('hero-contact-name');
-            if (heroContact) heroContact.innerText = `${contactName} & The ${dealerName} Team`;
-            const metaContact = document.getElementById('meta-contact');
-            if (metaContact) metaContact.innerText = contactName;
-
-            const metaDeclines = document.getElementById('meta-declines');
-            if (metaDeclines) metaDeclines.innerText = `~${declines} Leads / Month`;
-
-            const lostMin = (declines * 15000).toLocaleString('en-ZA');
-            const lostMax = (declines * 20000).toLocaleString('en-ZA');
-            const lostElem = document.getElementById('lost-declines-est');
-            if (lostElem) {
-                lostElem.innerText = `Estimated R${lostMin} – R${lostMax} / mo Currently Lost to Declines`;
+            // 1. Hero Header: "{dp || contact} & The {dealer} Team" or clean neutral fallback
+            const heroContactEl = document.getElementById('hero-contact-name');
+            if (heroContactEl) {
+                const person = p.dp || p.contact;
+                if (person && p.dealer) {
+                    heroContactEl.textContent = `${person} & The ${p.dealer} Team`;
+                } else if (person) {
+                    heroContactEl.textContent = `${person} & Your Dealership Team`;
+                } else if (p.dealer) {
+                    heroContactEl.textContent = `The ${p.dealer} Team`;
+                } else {
+                    heroContactEl.textContent = 'Your Dealership Team';
+                }
             }
 
-            // Propagate query parameters to all internal links so the branding persists across pages
-            const queryToForward = `?dealer=${encodeURIComponent(dealerName)}&contact=${encodeURIComponent(contactName)}&declines=${declines}`;
-            document.querySelectorAll('a[href$=".html"]').forEach(a => {
-                const href = a.getAttribute('href');
-                if (href && !href.includes('?') && !href.startsWith('http')) {
-                    a.setAttribute('href', href + queryToForward);
+            // 2. Hero Intro sentence spans (set strictly via .textContent)
+            const introContactEl = document.getElementById('hero-intro-contact');
+            if (introContactEl) {
+                introContactEl.textContent = p.contact ? ` with ${p.contact}` : '';
+            }
+            const introDateEl = document.getElementById('hero-intro-date');
+            if (introDateEl) {
+                introDateEl.textContent = p.date ? ` on ${p.date}` : '';
+            }
+            const introBanksEl = document.getElementById('hero-intro-banks');
+            if (introBanksEl) {
+                introBanksEl.textContent = p.banks ? p.banks : 'your lenders';
+            }
+
+            // 3. Metadata Pills
+            const metaContact = document.getElementById('meta-contact');
+            if (metaContact) {
+                metaContact.textContent = p.contact || p.dp || 'Executive Team';
+            }
+            const declinesNum = p.declinesForMath || 25;
+            const metaDeclines = document.getElementById('meta-declines');
+            if (metaDeclines) {
+                metaDeclines.textContent = `~${declinesNum} Leads / Month`;
+            }
+
+            // 4. Discussion Summary Heading + Monthly Loss Estimate
+            const summaryHeading = document.getElementById('discussion-summary-heading');
+            if (summaryHeading) {
+                summaryHeading.textContent = p.date
+                    ? `Discussion Summary \u2014 Meeting held ${p.date}`
+                    : 'Discussion Summary';
+            }
+
+            const lostElem = document.getElementById('lost-declines-est');
+            if (lostElem) {
+                if (p.marginK) {
+                    const estMonthly = Math.round(declinesNum * p.marginK * 1000).toLocaleString('en-ZA');
+                    lostElem.textContent = `Estimated R${estMonthly} / mo Currently Lost to Declines`;
+                } else {
+                    const lostMin = (declinesNum * 15000).toLocaleString('en-ZA');
+                    const lostMax = (declinesNum * 20000).toLocaleString('en-ZA');
+                    lostElem.textContent = `Estimated R${lostMin} \u2013 R${lostMax} / mo Currently Lost to Declines`;
                 }
-            });
+            }
+
+            // 5. Card 1: The Opportunity (Option A1 dynamic text via .textContent)
+            const oppLeadPrefix = document.getElementById('opp-lead-prefix');
+            if (oppLeadPrefix) {
+                oppLeadPrefix.textContent = p.contact ? `${p.contact} indicated that ` : '';
+            }
+            const oppDealerName = document.getElementById('opp-dealer-name');
+            if (oppDealerName) {
+                oppDealerName.textContent = p.displayDealer;
+            }
+            const oppDeclinesCount = document.getElementById('opp-declines-count');
+            if (oppDeclinesCount) {
+                oppDeclinesCount.textContent = `${declinesNum} finance declines per month`;
+            }
+            const oppMarginSentence = document.getElementById('opp-margin-sentence');
+            if (oppMarginSentence) {
+                oppMarginSentence.textContent = '';
+                if (p.marginK) {
+                    const totalK = Math.round(declinesNum * p.marginK * 10) / 10;
+                    oppMarginSentence.appendChild(document.createTextNode(`At an average front-end gross of R${p.marginK}k, that is up to `));
+                    const strongTotal = document.createElement('strong');
+                    strongTotal.className = 'text-gray-200';
+                    strongTotal.textContent = `R${totalK}k per month`;
+                    oppMarginSentence.appendChild(strongTotal);
+                    oppMarginSentence.appendChild(document.createTextNode(' in unrealised gross, currently written off without a structured follow-up.'));
+                } else {
+                    const minK = Math.round(declinesNum * 15);
+                    const maxK = Math.round(declinesNum * 20);
+                    oppMarginSentence.appendChild(document.createTextNode('At R15k\u2013R20k gross per deal, that is up to '));
+                    const strongRange = document.createElement('strong');
+                    strongRange.className = 'text-gray-200';
+                    strongRange.textContent = `R${minK}k\u2013R${maxK}k per month`;
+                    oppMarginSentence.appendChild(strongRange);
+                    oppMarginSentence.appendChild(document.createTextNode(' in unrealised gross, currently written off without a structured follow-up.'));
+                }
+            }
+
+            // 6. Conditional Card 4: Point Raised In Our Meeting (Clause 2.2 & Clause 7.1)
+            const concernCopyMap = {
+                exclusivity: `Every rehabilitated buyer is contractually ring-fenced back to ${p.displayDealer}. CBF does not refer clients to other dealerships (Clause 2.2).`,
+                popia: 'Customers consent directly to CBF under POPIA Section 11. No customer data is transferred from your systems (Clause 7.1).',
+                staff: 'No additional admin for your team. The F&I\u2019s only task is sharing the referral link.',
+                cost: 'No retainer, setup or monthly fees. Fees apply only to vehicles delivered.',
+                commitment: '30-day notice period with no exit penalty.'
+            };
+
+            const concernCard = document.getElementById('concern-card');
+            const concernCardBody = document.getElementById('concern-card-body');
+            const recapGrid = document.getElementById('recap-cards-grid');
+
+            if (p.concern && concernCopyMap[p.concern] && concernCard && concernCardBody) {
+                concernCardBody.textContent = concernCopyMap[p.concern];
+                concernCard.classList.remove('hidden');
+                if (recapGrid) {
+                    recapGrid.classList.remove('md:grid-cols-3');
+                    recapGrid.classList.add('md:grid-cols-2');
+                }
+            }
+
+            if (window.CBF_PERSONALIZE) {
+                window.CBF_PERSONALIZE.apply();
+            }
         });
     </script>
 </body>

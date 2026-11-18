@@ -131,17 +131,17 @@
                 <i data-lucide="sparkles" class="w-3.5 h-3.5 text-pink-400"></i>
                 Quick Presets:
             </span>
-            <button onclick="loadPreset('vw')" class="text-xs px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/10 hover:border-white/20 transition-all">
-                🚗 Volkswagen Menlyn (Johan Botha)
+            <button onclick="loadPreset('emerald')" class="text-xs px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/10 hover:border-white/20 transition-all">
+                Emerald Auto (Nerissa / Shaun)
             </button>
             <button onclick="loadPreset('bmw')" class="text-xs px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/10 hover:border-white/20 transition-all">
-                🏎️ BMW Sandton (Mark van der Merwe)
+                BMW Sandton (Mark van der Merwe)
             </button>
             <button onclick="loadPreset('toyota')" class="text-xs px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/10 hover:border-white/20 transition-all">
-                🚙 Toyota Centurion (Sarah Naidoo)
+                Toyota Centurion (Sarah Naidoo)
             </button>
             <button onclick="loadPreset('haval')" class="text-xs px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/10 hover:border-white/20 transition-all">
-                🚐 Haval Pretoria East (Kobus Venter)
+                Haval Pretoria East (Kobus Venter)
             </button>
         </div>
 
@@ -150,10 +150,10 @@
             
             <!-- LEFT: INPUT FORM (5 Cols) -->
             <div class="lg:col-span-5 space-y-6">
-                <div class="glass p-6 sm:p-7 rounded-3xl border border-white/10 space-y-5">
+                <div class="glass p-6 sm:p-7 rounded-3xl border border-white/10 space-y-4">
                     <div class="flex items-center gap-2 border-b border-white/10 pb-4">
                         <i data-lucide="sliders" class="w-5 h-5 text-emerald-400"></i>
-                        <h2 class="text-lg font-bold text-white font-heading">Dealership Particulars</h2>
+                        <h2 class="text-lg font-bold text-white font-heading">Option A1 Dealership Particulars</h2>
                     </div>
 
                     <!-- Input 1: Dealership Name -->
@@ -161,43 +161,62 @@
                         <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
                             Dealership Store Name <span class="text-emerald-400">*</span>
                         </label>
-                        <input type="text" id="dealerName" value="Volkswagen Menlyn" placeholder="e.g. BMW Sandton" 
+                        <input type="text" id="dealerName" value="Emerald Auto" placeholder="e.g. Emerald Auto" 
                                class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
-                        <p class="text-[11px] text-gray-500">Appears on portal headers, heroes, contract, and footers.</p>
+                        <p class="text-[11px] text-gray-500">Appears across headers, heroes, agreement, and footers.</p>
                     </div>
 
-                    <!-- Input 2: Contact Person -->
-                    <div class="space-y-1.5">
-                        <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
-                            Decision Maker / Contact Name <span class="text-emerald-400">*</span>
-                        </label>
-                        <input type="text" id="contactName" value="Johan Botha" placeholder="e.g. Johan Botha" 
-                               class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
-                        <p class="text-[11px] text-gray-500">E.g., Johan &amp; The Volkswagen Menlyn Team</p>
+                    <!-- Input 2 & 3: F&I Contact + Dealer Principal -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="space-y-1.5">
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
+                                F&amp;I / Contact Name <span class="text-emerald-400">*</span>
+                            </label>
+                            <input type="text" id="contactName" value="Nerissa" placeholder="e.g. Nerissa" 
+                                   class="w-full bg-black/40 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
+                                Dealer Principal (Optional)
+                            </label>
+                            <input type="text" id="dpName" value="Shaun" placeholder="e.g. Shaun" 
+                                   class="w-full bg-black/40 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
                     </div>
 
-                    <!-- Input 3: Role / Title -->
-                    <div class="space-y-1.5">
-                        <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
-                            Title / Position
-                        </label>
-                        <select id="contactRole" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors">
-                            <option value="Dealer Principal">Dealer Principal (DP)</option>
-                            <option value="General Manager">General Manager (GM)</option>
-                            <option value="Finance & Insurance Business Manager">Finance &amp; Insurance Manager (F&amp;I)</option>
-                            <option value="New/Pre-Owned Sales Manager">Sales Manager</option>
-                        </select>
+                    <!-- DP Email Captured Toggle -->
+                    <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer select-none pt-0.5">
+                        <input type="checkbox" id="dpEmailCaptured" class="rounded accent-emerald-500 w-4 h-4">
+                        <span>DP email captured &amp; included on email (hides forwarding line)</span>
+                    </label>
+
+                    <!-- Input 4 & 5: Meeting Date & Lenders -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="space-y-1.5">
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
+                                Meeting Date (Optional)
+                            </label>
+                            <input type="text" id="meetingDate" value="" placeholder="e.g. 19 Nov" 
+                                   class="w-full bg-black/40 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
+                                Lenders Mentioned (Optional)
+                            </label>
+                            <input type="text" id="banksInput" value="WesBank, MFC" placeholder="e.g. WesBank, MFC" 
+                                   class="w-full bg-black/40 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
                     </div>
 
-                    <!-- Input 4: Monthly Declines -->
+                    <!-- Input 6: Monthly Declines -->
                     <div class="space-y-1.5">
                         <div class="flex justify-between items-center">
                             <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
                                 Monthly Finance Turn-Downs
                             </label>
-                            <span id="declinesDisplay" class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-lg border border-emerald-500/20">45 Declines</span>
+                            <span id="declinesDisplay" class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-lg border border-emerald-500/20">30 Declines</span>
                         </div>
-                        <input type="range" id="declinesSlider" min="10" max="100" value="45" step="5" class="w-full accent-emerald-500">
+                        <input type="range" id="declinesSlider" min="10" max="100" value="30" step="5" class="w-full accent-emerald-500">
                         <div class="flex justify-between text-[11px] text-gray-500 font-medium">
                             <span>10 min</span>
                             <span>25 avg</span>
@@ -206,16 +225,32 @@
                         </div>
                     </div>
 
-                    <!-- Input 5: Gross Margin per Unit -->
+                    <!-- Input 7: Avg Front-End Gross Margin (in R thousands) -->
                     <div class="space-y-1.5">
                         <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
-                            Est. Gross Profit per Unit (ZAR)
+                            Avg Front-End Gross per Unit (Optional)
                         </label>
                         <select id="marginPerUnit" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors">
-                            <option value="15000">R 15,000 / unit (Entry/Budget)</option>
-                            <option value="18000" selected>R 18,000 / unit (Mid-tier/VW/Toyota)</option>
-                            <option value="22000">R 22,000 / unit (Premium/SUV)</option>
-                            <option value="30000">R 30,000 / unit (Luxury/BMW/Mercedes)</option>
+                            <option value="">Not specified (uses R15k–R20k range)</option>
+                            <option value="15">R15k / unit (Entry/Budget)</option>
+                            <option value="18" selected>R18k / unit (Mid-tier)</option>
+                            <option value="22">R22k / unit (Premium/SUV)</option>
+                            <option value="30">R30k / unit (Luxury)</option>
+                        </select>
+                    </div>
+
+                    <!-- Input 8: Primary Concern Raised -->
+                    <div class="space-y-1.5">
+                        <label class="block text-xs font-bold text-gray-300 uppercase tracking-wide">
+                            Main Question / Point Raised (Optional)
+                        </label>
+                        <select id="concernSelect" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors">
+                            <option value="">None (shows 3 summary cards)</option>
+                            <option value="exclusivity" selected>Lead Exclusivity &amp; Non-Poaching (Clause 2.2)</option>
+                            <option value="popia">POPIA &amp; Customer Data Privacy (Clause 7.1)</option>
+                            <option value="staff">F&amp;I / Staff Admin Involvement</option>
+                            <option value="cost">Upfront Fees &amp; Retainers</option>
+                            <option value="commitment">Notice Period &amp; Lock-In</option>
                         </select>
                     </div>
 
@@ -234,13 +269,13 @@
                     <div class="flex items-center justify-between gap-4 mb-3">
                         <div class="flex items-center gap-2">
                             <i data-lucide="link-2" class="w-4 h-4 text-emerald-400"></i>
-                            <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading">1. Custom Portal URL</h3>
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading">1. Option A1 Portal URL</h3>
                         </div>
-                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 font-bold">100% White-Labeled</span>
+                        <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 font-bold">Auto-Propagates Across All Pages</span>
                     </div>
 
                     <div class="bg-black/50 border border-white/10 rounded-xl p-3 flex items-center gap-2 font-mono text-xs text-emerald-300 break-all select-all">
-                        <span id="outputUrl">https://dealerships.volvemedia.com/?dealer=Volkswagen%20Menlyn&contact=Johan%20Botha&declines=45</span>
+                        <span id="outputUrl">https://dealerships.volvemedia.com/</span>
                     </div>
 
                     <div class="flex flex-wrap items-center gap-3 mt-4">
@@ -248,7 +283,7 @@
                             <i data-lucide="copy" class="w-3.5 h-3.5"></i>
                             <span>Copy Custom Link</span>
                         </button>
-                        <a id="previewBtn" href="https://dealerships.volvemedia.com/?dealer=Volkswagen%20Menlyn&contact=Johan%20Botha&declines=45" target="_blank" 
+                        <a id="previewBtn" href="https://dealerships.volvemedia.com/" target="_blank" 
                            class="py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs flex items-center justify-center gap-1.5 border border-white/10 transition-all">
                             <i data-lucide="external-link" class="w-3.5 h-3.5 text-emerald-400"></i>
                             <span>Test Live in New Tab</span>
@@ -264,7 +299,7 @@
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex items-center gap-2">
                             <i data-lucide="mail" class="w-4 h-4 text-pink-400"></i>
-                            <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading">2. Executive Post-Meeting Email</h3>
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider font-heading">2. Follow-Up Email Draft</h3>
                         </div>
                         <button onclick="copyToClipboard('emailBodyText', 'emailToast')" class="text-xs py-1.5 px-3 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/30 font-bold flex items-center gap-1.5 transition-all">
                             <i data-lucide="copy" class="w-3.5 h-3.5"></i>
@@ -275,7 +310,7 @@
                     <div class="space-y-2 text-xs">
                         <div class="flex items-center gap-2 bg-black/40 border border-white/10 rounded-lg px-3 py-2 font-mono text-gray-300">
                             <span class="text-gray-500 font-bold">Subject:</span>
-                            <span id="emailSubject" class="text-white font-medium">Follow-up &amp; Commercial Review Portal — Volve Media &times; Volkswagen Menlyn</span>
+                            <span id="emailSubject" class="text-white font-medium">Meeting Follow-Up: Credit Builder Flow x Emerald Auto</span>
                         </div>
 
                         <div id="emailBodyText" class="bg-black/40 border border-white/10 rounded-xl p-4 font-mono text-gray-300 leading-relaxed whitespace-pre-wrap select-all text-[11px] max-h-80 overflow-y-auto">
@@ -286,7 +321,7 @@
                     </div>
                 </div>
 
-                <!-- OUTPUT 3: 30-SECOND WHATSAPP FOLLOW-UP -->
+                <!-- OUTPUT 3: QUICK WHATSAPP FOLLOW-UP -->
                 <div class="glass p-6 rounded-3xl border border-white/10 space-y-4">
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex items-center gap-2">
@@ -312,15 +347,21 @@
 
     </main>
 
+    <script src="portal-personalize.js"></script>
+
     <!-- INTERACTIVE SCRIPT -->
     <script>
-        lucide.createIcons();
+        if (window.lucide) lucide.createIcons();
 
         const dealerInput = document.getElementById('dealerName');
         const contactInput = document.getElementById('contactName');
-        const roleInput = document.getElementById('contactRole');
+        const dpInput = document.getElementById('dpName');
+        const dpEmailCapturedInput = document.getElementById('dpEmailCaptured');
+        const dateInput = document.getElementById('meetingDate');
+        const banksInput = document.getElementById('banksInput');
         const slider = document.getElementById('declinesSlider');
         const marginSelect = document.getElementById('marginPerUnit');
+        const concernSelect = document.getElementById('concernSelect');
         const declinesDisplay = document.getElementById('declinesDisplay');
 
         const outputUrl = document.getElementById('outputUrl');
@@ -329,12 +370,20 @@
         const emailBodyText = document.getElementById('emailBodyText');
         const whatsappText = document.getElementById('whatsappText');
 
-        // Presets
+        // Default meeting date display to today in "d MMM" format (e.g. "18 Nov")
+        function formatTodayShort() {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const now = new Date();
+            return `${now.getDate()} ${months[now.getMonth()]}`;
+        }
+        dateInput.value = formatTodayShort();
+
+        // Presets (Option A1 ready, zero emojis)
         const presets = {
-            vw: { dealer: 'Volkswagen Menlyn', contact: 'Johan Botha', role: 'Dealer Principal', declines: 45, margin: 18000 },
-            bmw: { dealer: 'BMW Sandton', contact: 'Mark van der Merwe', role: 'General Manager', declines: 55, margin: 30000 },
-            toyota: { dealer: 'Toyota Centurion', contact: 'Sarah Naidoo', role: 'Finance & Insurance Business Manager', declines: 35, margin: 18000 },
-            haval: { dealer: 'Haval Pretoria East', contact: 'Kobus Venter', role: 'Dealer Principal', declines: 30, margin: 15000 }
+            emerald: { dealer: 'Emerald Auto', contact: 'Nerissa', dp: 'Shaun', declines: 30, margin: '18', banks: 'WesBank, MFC', concern: 'exclusivity', dpEmailCaptured: false },
+            bmw: { dealer: 'BMW Sandton', contact: 'Mark van der Merwe', dp: '', declines: 55, margin: '30', banks: 'BMW Financial Services, WesBank', concern: 'popia', dpEmailCaptured: false },
+            toyota: { dealer: 'Toyota Centurion', contact: 'Sarah Naidoo', dp: 'Pieter', declines: 35, margin: '18', banks: 'Toyota Financial Services, Absa', concern: 'staff', dpEmailCaptured: true },
+            haval: { dealer: 'Haval Pretoria East', contact: 'Kobus Venter', dp: '', declines: 30, margin: '15', banks: 'WesBank, MFC, Standard Bank', concern: 'cost', dpEmailCaptured: false }
         };
 
         function loadPreset(key) {
@@ -342,9 +391,13 @@
             if (!p) return;
             dealerInput.value = p.dealer;
             contactInput.value = p.contact;
-            roleInput.value = p.role;
+            dpInput.value = p.dp || '';
+            dpEmailCapturedInput.checked = !!p.dpEmailCaptured;
+            dateInput.value = formatTodayShort();
+            banksInput.value = p.banks || '';
             slider.value = p.declines;
-            marginSelect.value = p.margin;
+            marginSelect.value = p.margin || '';
+            concernSelect.value = p.concern || '';
             updateAllOutputs();
         }
 
@@ -353,76 +406,86 @@
             updateAllOutputs();
         });
 
-        [dealerInput, contactInput, roleInput, marginSelect].forEach(el => {
+        [dealerInput, contactInput, dpInput, dpEmailCapturedInput, dateInput, banksInput, marginSelect, concernSelect].forEach(el => {
             el.addEventListener('input', updateAllOutputs);
+            el.addEventListener('change', updateAllOutputs);
         });
 
         function updateAllOutputs() {
-            const dealer = dealerInput.value.trim() || 'Dealership Partner';
-            const contact = contactInput.value.trim() || 'Dealer Principal';
-            const role = roleInput.value;
-            const declines = parseInt(slider.value, 10);
-            const margin = parseInt(marginSelect.value, 10);
+            const dealer = dealerInput.value.trim() || 'Your Dealership';
+            const contact = contactInput.value.trim();
+            const dp = dpInput.value.trim();
+            const dpEmailCaptured = dpEmailCapturedInput.checked;
+            const date = dateInput.value.trim();
+            const banks = banksInput.value.trim();
+            const declines = parseInt(slider.value, 10) || 25;
+            const margin = marginSelect.value.trim();
+            const concern = concernSelect.value.trim();
             declinesDisplay.textContent = `${declines} Declines`;
 
-            // Calculate Metrics
-            const unitsRecovered = Math.max(1, Math.round(declines * 0.40));
-            const monthlyMargin = unitsRecovered * margin;
-            const minBleed = (declines * 15000).toLocaleString('en-ZA');
-            const maxBleed = (declines * 22000).toLocaleString('en-ZA');
-            const monthlyMarginFormatted = monthlyMargin.toLocaleString('en-ZA');
-
-            // 1. Generate Clean URL
+            // 1. Build clean Option A1 URL (omit empty optional params)
             const baseUrl = 'https://dealerships.volvemedia.com';
-            const params = new URLSearchParams({
-                dealer: dealer,
-                contact: contact,
-                declines: declines.toString()
-            });
-            const fullUrl = `${baseUrl}/?${params.toString()}`;
+            const params = new URLSearchParams();
+            if (dealerInput.value.trim()) params.set('dealer', dealerInput.value.trim());
+            if (contact) params.set('contact', contact);
+            if (dp) params.set('dp', dp);
+            if (date) params.set('date', date);
+            params.set('declines', declines.toString());
+            if (margin) params.set('margin', margin);
+            if (banks) params.set('banks', banks);
+            if (concern) params.set('concern', concern);
 
+            const fullUrl = `${baseUrl}/?${params.toString()}`;
             outputUrl.textContent = fullUrl;
             previewBtn.setAttribute('href', fullUrl);
 
-            // 2. Email Subject & Body
-            emailSubject.textContent = `Follow-up & Commercial Review Portal — Volve Media × ${dealer}`;
+            // 2. Gmail Draft Subject & Body matching Option A1 spec
+            emailSubject.textContent = `Meeting Follow-Up: Credit Builder Flow x ${dealer}`;
 
-            const emailTemplate = 
-`Hi ${contact},
+            let greeting = 'Hi there,';
+            if (contact && dp && dpEmailCaptured) {
+                greeting = `Hi ${contact} and ${dp},`;
+            } else if (contact) {
+                greeting = `Hi ${contact},`;
+            } else if (dp) {
+                greeting = `Hi ${dp},`;
+            }
 
-Thank you for your time during our discussion today regarding ${dealer}'s unfinanced vehicle applications across WesBank, MFC, Absa, and Standard Bank.
+            const forwardLine = !dpEmailCaptured
+                ? '\nPlease feel free to forward this email to your Dealer Principal.\n'
+                : '\n';
 
-As discussed, based on your volume of ~${declines} turned-down buyers per month, ${dealer} is currently leaking an estimated R${minBleed} – R${maxBleed} every month in uncaptured front-end gross margin and F&I commission.
+            const emailTemplate =
+`${greeting}
 
-To help you and the executive team review our auxiliary recovery structure, we have prepared a dedicated, confidential Commercial Decision Portal exclusively for ${dealer}:
+Thank you for your time today. As discussed, we have prepared a review portal for ${dealer} that summarises our conversation, the commercial terms and the Master Service Agreement.
 
-👉 Access Your Dedicated Review Portal:
+Open the ${dealer} Review Portal:
 ${fullUrl}
 
-Key sections prepared for your review:
-1. Commercial Model & Math: Interactive calculation demonstrating how recovering ~${unitsRecovered} units per month recaptures ~R${monthlyMarginFormatted}/month in gross profit with zero upfront retainer fees.
-2. Forensic Underwriting Evidence: Verifiable client audit trails (including WesBank & Capitec documentation, bureau score jumps, and DTI recalibrations).
-3. Operational Scope & SLAs: Non-poaching contractual and system-enforced ring-fencing ensuring leads return exclusively to your showroom floor.
-4. 14-Day Pilot: Review the Master Service Agreement structure (performance-only, no upfront fees).
+The portal includes:
+- A summary of our discussion, including the ~${declines} monthly declines mentioned
+- The fee structure: R0 retainer; R6,000 or 5% (incl. VAT), payable only per delivered vehicle
+- Case studies and the compliance framework (POPIA and exclusivity)
+- The Master Service Agreement, which can be reviewed and signed online
 
-Please review the portal at your convenience. When would suit you best for a brief 10-minute touchpoint this Thursday or Friday to finalize the operational referral link for your F&I team?
-
-Warm regards,
-
-Volve Media • Credit Builder Flow
-Commercial Partnerships Desk
-WhatsApp: +27 79 476 2500 | Email: volve@volvemedia.com | Web: volvemedia.com`;
+Once the agreement is signed, your team will be directed to register on the dealership portal, where your F&I referral links are issued.${forwardLine}
+Kind regards,
+Kea Letsoalo
+Volve Media | Credit Builder Flow
++27 79 476 2500 | volve@volvemedia.com`;
 
             emailBodyText.textContent = emailTemplate;
 
-            // 3. WhatsApp Message
-            const waTemplate = 
-`Hi ${contact}, great connecting today regarding ${dealer}! 
+            // 3. Evergreen WhatsApp Message (no hardcoded weekdays, clean performance copy, zero emojis)
+            const waName = contact || dp || 'there';
+            const waTemplate =
+`Hi ${waName}, thank you for the conversation today regarding ${dealer}.
 
-I've prepared your private Commercial Review Portal modeling the recovery on your ~${declines} monthly finance turn-downs:
+I have put together your review portal summarising our discussion on the ~${declines} monthly finance declines, the performance-only terms, and the Master Service Agreement:
 ${fullUrl}
 
-Take a quick look over the case studies and the pilot terms and commercial structure when you have a minute. Looking forward to chatting Thursday!`;
+Once your team is ready to proceed, you can sign the agreement directly online and register on the dealership portal for your F&I referral links. Happy to answer any questions here anytime.`;
 
             whatsappText.textContent = waTemplate;
         }
@@ -443,7 +506,6 @@ Take a quick look over the case studies and the pilot terms and commercial struc
             });
         }
 
-        // Initialize on page load
         updateAllOutputs();
     </script>
 </body>
