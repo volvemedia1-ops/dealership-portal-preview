@@ -315,12 +315,12 @@
                                 <span class="text-pink-400 font-black text-lg font-heading" id="leads-val">25</span>
                             </div>
                         </div>
-                        <input type="range" id="leads" min="10" max="100" value="25" step="1" class="w-full">
+                        <input type="range" id="leads" min="10" max="150" value="25" step="1" class="w-full">
                         <div class="flex justify-between text-xs text-gray-400 font-semibold">
                             <span>10</span>
                             <span class="text-pink-400 font-bold">25 (Baseline)</span>
-                            <span>50</span>
-                            <span>100</span>
+                            <span>75</span>
+                            <span>150</span>
                         </div>
                         <p class="text-[11px] text-gray-500 italic">
                             *Context: SA dealerships typically see 50%&ndash;65% bank turn-down rates (e.g., ~45 finance applications yield ~25 declines).
@@ -347,26 +347,14 @@
                         </div>
                     </div>
 
-                    <!-- Slider 3: Average Vehicle Retail Selling Price -->
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-end">
-                            <div>
-                                <label for="vehicle-price" class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Avg Vehicle Retail Selling Price</label>
-                                <span class="text-[11px] text-gray-400">Determines CBF fee tier: R6,000 flat (&lt; R130k) or 5.0% (&ge; R130k), incl. VAT</span>
-                            </div>
-                            <div class="bg-white/5 border border-blue-500/30 px-3 py-1 rounded-xl shadow-inner">
-                                <span class="text-blue-400 font-black text-lg font-heading" id="vehicle-price-val">R 180,000</span>
-                            </div>
+                    <!-- Active Contingency Fee Structure Card -->
+                    <div class="p-4 rounded-2xl bg-blue-500/5 border border-blue-500/20 space-y-1.5">
+                        <div class="flex items-center justify-between gap-3">
+                            <span class="text-xs font-bold text-white uppercase tracking-wide">Active CBF Contingency Fee</span>
+                            <span class="text-sm font-black text-blue-300 font-heading">R 6,000 flat (incl. VAT)</span>
                         </div>
-                        <input type="range" id="vehicle-price" min="90000" max="400000" step="10000" value="180000" class="w-full">
-                        <div class="flex justify-between text-xs text-gray-400 font-semibold">
-                            <span>R 90k</span>
-                            <span class="text-amber-300">R 130k Tier Split</span>
-                            <span>R 250k</span>
-                            <span>R 400k</span>
-                        </div>
-                        <p class="text-[11px] text-blue-300 font-medium" id="fee-tier-badge">
-                            Active fee tier: 5.0% of Retail Selling Price (R 9,000 incl. VAT per funded delivery)
+                        <p class="text-[11px] text-gray-400 leading-relaxed" id="fee-tier-badge">
+                            Flat R 6,000 (incl. VAT) per funded delivery across all vehicle price brackets &mdash; locked for the initial 6-month term, with a mutual commercial review at Month 6. R0 retainer, R0 upfront cost.
                         </p>
                     </div>
                 </div>
@@ -396,7 +384,7 @@
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                             <p class="text-gray-400 text-[11px] uppercase tracking-widest font-bold">Net Monthly Profit Retained by Dealership</p>
                         </div>
-                        <p class="font-heading text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight" id="monthly-recovery">R 66,000</p>
+                        <p class="font-heading text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight" id="monthly-recovery">R 84,000</p>
                         <span class="text-xs text-emerald-300 font-semibold block" id="units-recovered-text">6 Estimated Funded Deliveries (~40% of 15 qualified opt-ins)</span>
                     </div>
 
@@ -407,12 +395,12 @@
                             <span class="font-bold text-white font-mono" id="gross-recovery">R 120,000</span>
                         </div>
                         <div class="flex items-center justify-between text-rose-300">
-                            <span>Less CBF Contingency Fee (incl. VAT)</span>
-                            <span class="font-bold font-mono" id="cbf-fee-total">- R 54,000</span>
+                            <span>Less CBF Contingency Fee (R6,000 incl. VAT)</span>
+                            <span class="font-bold font-mono" id="cbf-fee-total">- R 36,000</span>
                         </div>
                         <div class="pt-2 border-t border-white/10 flex items-center justify-between text-emerald-400 font-extrabold">
                             <span>Net Monthly Profit Retained</span>
-                            <span class="font-mono" id="net-ledger-total">R 66,000</span>
+                            <span class="font-mono" id="net-ledger-total">R 84,000</span>
                         </div>
                     </div>
 
@@ -420,18 +408,18 @@
                     <div class="grid grid-cols-2 gap-3 text-xs">
                         <div class="p-3 bg-white/[0.03] border border-white/5 rounded-xl space-y-1">
                             <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Annual Net Retained</span>
-                            <span class="text-lg font-extrabold text-pink-400 font-heading block" id="annual-recovery">R 792,000</span>
+                            <span class="text-lg font-extrabold text-pink-400 font-heading block" id="annual-recovery">R 1,008,000</span>
                         </div>
                         <div class="p-3 bg-white/[0.03] border border-white/5 rounded-xl space-y-1">
                             <span class="text-gray-400 block text-[10px] uppercase font-bold tracking-wider">Weekly Net Opportunity</span>
-                            <span class="text-lg font-extrabold text-rose-400 font-heading block" id="weekly-bleed">R 16,500</span>
+                            <span class="text-lg font-extrabold text-rose-400 font-heading block" id="weekly-bleed">R 21,000</span>
                         </div>
                     </div>
 
                     <!-- Dynamic Inaction Statement -->
                     <div class="bg-white/[0.02] rounded-xl p-3.5 border border-white/10 text-xs leading-relaxed text-gray-300 flex items-start gap-2.5">
                         <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
-                        <span id="dynamic-burn-text">Referring 25 declines (~15 qualified opt-ins) yields ~6 funded units/month: R 120,000 gross recovered minus R 54,000 CBF fee (incl. VAT) = R 66,000 net profit retained.</span>
+                        <span id="dynamic-burn-text">Referring 25 declines (~15 qualified opt-ins) yields ~6 funded units/month: R 120,000 gross recovered minus R 36,000 CBF fee (incl. VAT) = R 84,000 net profit retained.</span>
                     </div>
 
                     <!-- Action Link to Step 06 -->
@@ -449,7 +437,7 @@
                     <div class="space-y-1">
                         <strong class="text-white font-bold block text-xs uppercase tracking-wider">Transparent Financial Modeling &amp; Projections Disclaimer:</strong>
                         <p class="text-gray-400 text-xs leading-relaxed">
-                            Modeled conservatively on raw referrals: roughly 60% of referred declines meet baseline qualification and complete direct digital opt-in, and ~40% of qualified opt-ins convert into funded vehicle deliveries (~25% of total referred declines, rounded to whole units). CBF&rsquo;s contingency fee (R6,000 flat incl. VAT for vehicles under R130,000, or 5.0% of Retail Selling Price incl. VAT for vehicles R130,000+) is explicitly deducted above so you see true Net Profit Retained. Zero upfront fees, zero retainer&mdash;invoiced strictly upon bank payout and delivery.
+                            Modeled conservatively on raw referrals: roughly 60% of referred declines meet baseline qualification and complete direct digital opt-in, and ~40% of qualified opt-ins convert into funded vehicle deliveries (~25% of total referred declines, rounded to whole units). CBF&rsquo;s contingency fee (R6,000 flat incl. VAT per funded delivery across all vehicle price brackets, locked for the initial 6-month term) is explicitly deducted above so you see true Net Profit Retained. Zero upfront fees, zero retainer&mdash;invoiced strictly upon bank payout and delivery.
                         </p>
                     </div>
                 </div>
@@ -541,12 +529,9 @@
         // Transparent Revenue Leakage & Net Profit Retained Calculator Logic
         const leadsSlider = document.getElementById('leads');
         const profitSlider = document.getElementById('profit');
-        const vehiclePriceSlider = document.getElementById('vehicle-price');
 
         const leadsVal = document.getElementById('leads-val');
         const profitVal = document.getElementById('profit-val');
-        const vehiclePriceVal = document.getElementById('vehicle-price-val');
-        const feeTierBadge = document.getElementById('fee-tier-badge');
 
         const funnelLeads = document.getElementById('funnel-leads');
         const funnelQualified = document.getElementById('funnel-qualified');
@@ -567,33 +552,24 @@
         }
 
         function updateMath() {
-            if (!leadsSlider || !profitSlider || !vehiclePriceSlider) return;
+            if (!leadsSlider || !profitSlider) return;
             const leads = parseInt(leadsSlider.value, 10);
             const profit = parseInt(profitSlider.value, 10);
-            const vehiclePrice = parseInt(vehiclePriceSlider.value, 10);
 
             if (leadsVal) leadsVal.textContent = String(leads);
             if (profitVal) profitVal.textContent = formatCurrency(profit);
-            if (vehiclePriceVal) vehiclePriceVal.textContent = formatCurrency(vehiclePrice);
 
             // Funnel math: ~60% meet qualification & opt-in; ~40% of opt-ins convert (~25% of total referrals)
             const qualifiedOptIns = Math.max(1, Math.round(leads * 0.60));
             const unitsRecovered = Math.max(1, Math.round(leads * 0.25));
 
-            // Fee tier (all incl. VAT): R6,000 flat < R130k, 5.0% >= R130k
-            const isFlatTier = vehiclePrice < 130000;
-            const feePerUnit = isFlatTier ? 6000 : Math.round(vehiclePrice * 0.05);
+            // Flat contingency fee (incl. VAT): R6,000 across all vehicle price brackets (6-month initial rate lock)
+            const feePerUnit = 6000;
             const grossMonthly = unitsRecovered * profit;
             const totalFee = unitsRecovered * feePerUnit;
             const netMonthly = grossMonthly - totalFee;
             const netAnnual = netMonthly * 12;
             const weeklyNet = Math.round(netMonthly / 4);
-
-            if (feeTierBadge) {
-                feeTierBadge.textContent = isFlatTier
-                    ? 'Active fee tier: R 6,000 flat (incl. VAT) per funded delivery (under R130k)'
-                    : 'Active fee tier: 5.0% of Retail Selling Price (' + formatCurrency(feePerUnit) + ' incl. VAT per funded delivery)';
-            }
 
             if (funnelLeads) funnelLeads.textContent = leads + '/mo';
             if (funnelQualified) funnelQualified.textContent = qualifiedOptIns + '/mo';
@@ -624,10 +600,10 @@
             }
         }
 
-        if (leadsSlider && profitSlider && vehiclePriceSlider) {
+        if (leadsSlider && profitSlider) {
             const prospect = window.CBF_PROSPECT || {};
             if (prospect.declines) {
-                leadsSlider.value = String(Math.min(100, Math.max(10, prospect.declines)));
+                leadsSlider.value = String(Math.min(150, Math.max(10, prospect.declines)));
             }
             if (prospect.marginK) {
                 const marginRand = Math.round(prospect.marginK * 1000);
@@ -636,7 +612,6 @@
 
             leadsSlider.addEventListener('input', updateMath);
             profitSlider.addEventListener('input', updateMath);
-            vehiclePriceSlider.addEventListener('input', updateMath);
             updateMath();
         }
 
