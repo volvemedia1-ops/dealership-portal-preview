@@ -265,7 +265,7 @@
                 </div>
                 <div class="text-rose-400 text-xs font-semibold flex items-center gap-1.5">
                     <i data-lucide="trending-down" class="w-3.5 h-3.5"></i>
-                    <span id="lost-declines-est">Estimated R375,000 – R500,000 / mo Currently Lost to Declines</span>
+                    <span id="lost-declines-est">Est. ~6 Recoverable Units / mo (R54,000 &ndash; R84,000 Net Retained)</span>
                 </div>
             </div>
 
@@ -278,7 +278,7 @@
                         <span>The Opportunity</span>
                     </div>
                     <p id="card-opportunity-body" class="text-gray-400 leading-relaxed text-xs">
-                        <span id="opp-lead-prefix"></span><span id="opp-dealer-name" class="text-gray-200 font-semibold">Your Dealership</span> sees approximately <strong id="opp-declines-count" class="text-gray-200">25 finance declines per month</strong>. <span id="opp-margin-sentence">At R15k–R20k gross per deal, that is up to <strong class="text-gray-200">R375k–R500k per month</strong> in unrealised gross, currently written off without a structured follow-up.</span>
+                        <span id="opp-lead-prefix"></span><span id="opp-dealer-name" class="text-gray-200 font-semibold">Your Dealership</span> sees approximately <strong id="opp-declines-count" class="text-gray-200">25 finance declines per month</strong>. <span id="opp-margin-sentence">Even at a conservative ~25% recovery rate (~6 funded units/month) and R15k&ndash;R20k gross per deal, that represents <strong class="text-gray-200">R90,000&ndash;R120,000 per month</strong> in recoverable gross (R54,000&ndash;R84,000/mo net after CBF&rsquo;s R6,000 flat fee) currently written off without a structured follow-up.</span>
                     </p>
                 </div>
 
@@ -620,19 +620,25 @@
                     : 'Discussion Summary';
             }
 
+            const formatRand = (n) => 'R' + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            const recoverableUnits = Math.max(1, Math.round(declinesNum * 0.25));
+            const totalCbfFee = recoverableUnits * 6000;
+            const unitWord = recoverableUnits === 1 ? 'unit' : 'units';
+
             const lostElem = document.getElementById('lost-declines-est');
             if (lostElem) {
                 if (p.marginK) {
-                    const estMonthly = Math.round(declinesNum * p.marginK * 1000).toLocaleString('en-ZA');
-                    lostElem.textContent = `Estimated R${estMonthly} / mo Currently Lost to Declines`;
+                    const grossMonthly = recoverableUnits * p.marginK * 1000;
+                    const netMonthly = Math.max(0, grossMonthly - totalCbfFee);
+                    lostElem.textContent = `Est. ~${recoverableUnits} Recoverable ${recoverableUnits === 1 ? 'Unit' : 'Units'} / mo (${formatRand(netMonthly)} Net Retained)`;
                 } else {
-                    const lostMin = (declinesNum * 15000).toLocaleString('en-ZA');
-                    const lostMax = (declinesNum * 20000).toLocaleString('en-ZA');
-                    lostElem.textContent = `Estimated R${lostMin} \u2013 R${lostMax} / mo Currently Lost to Declines`;
+                    const netMin = Math.max(0, recoverableUnits * 15000 - totalCbfFee);
+                    const netMax = Math.max(0, recoverableUnits * 20000 - totalCbfFee);
+                    lostElem.textContent = `Est. ~${recoverableUnits} Recoverable ${recoverableUnits === 1 ? 'Unit' : 'Units'} / mo (${formatRand(netMin)} \u2013 ${formatRand(netMax)} Net Retained)`;
                 }
             }
 
-            // 5. Card 1: The Opportunity (Option A1 dynamic text via .textContent)
+            // 5. Card 1: The Opportunity (Option A1 dynamic text via .textContent — aligned with 25% ROI model)
             const oppLeadPrefix = document.getElementById('opp-lead-prefix');
             if (oppLeadPrefix) {
                 oppLeadPrefix.textContent = p.contact ? `${p.contact} indicated that ` : '';
@@ -649,22 +655,25 @@
             if (oppMarginSentence) {
                 oppMarginSentence.textContent = '';
                 if (p.marginK) {
-                    const totalK = Math.round(declinesNum * p.marginK * 10) / 10;
-                    oppMarginSentence.appendChild(document.createTextNode(`At an average front-end gross of R${p.marginK}k, that is up to `));
+                    const grossMonthly = recoverableUnits * p.marginK * 1000;
+                    const netMonthly = Math.max(0, grossMonthly - totalCbfFee);
+                    oppMarginSentence.appendChild(document.createTextNode(`Even at a conservative ~25% recovery rate (~${recoverableUnits} funded ${unitWord}/month) and R${p.marginK}k gross per deal, that represents `));
                     const strongTotal = document.createElement('strong');
                     strongTotal.className = 'text-gray-200';
-                    strongTotal.textContent = `R${totalK}k per month`;
+                    strongTotal.textContent = `${formatRand(grossMonthly)} per month`;
                     oppMarginSentence.appendChild(strongTotal);
-                    oppMarginSentence.appendChild(document.createTextNode(' in unrealised gross, currently written off without a structured follow-up.'));
+                    oppMarginSentence.appendChild(document.createTextNode(` in recoverable gross (${formatRand(netMonthly)}/mo net after CBF\u2019s R6,000 flat fee) currently written off without a structured follow-up.`));
                 } else {
-                    const minK = Math.round(declinesNum * 15);
-                    const maxK = Math.round(declinesNum * 20);
-                    oppMarginSentence.appendChild(document.createTextNode('At R15k\u2013R20k gross per deal, that is up to '));
+                    const grossMin = recoverableUnits * 15000;
+                    const grossMax = recoverableUnits * 20000;
+                    const netMin = Math.max(0, grossMin - totalCbfFee);
+                    const netMax = Math.max(0, grossMax - totalCbfFee);
+                    oppMarginSentence.appendChild(document.createTextNode(`Even at a conservative ~25% recovery rate (~${recoverableUnits} funded ${unitWord}/month) and R15k\u2013R20k gross per deal, that represents `));
                     const strongRange = document.createElement('strong');
                     strongRange.className = 'text-gray-200';
-                    strongRange.textContent = `R${minK}k\u2013R${maxK}k per month`;
+                    strongRange.textContent = `${formatRand(grossMin)}\u2013${formatRand(grossMax)} per month`;
                     oppMarginSentence.appendChild(strongRange);
-                    oppMarginSentence.appendChild(document.createTextNode(' in unrealised gross, currently written off without a structured follow-up.'));
+                    oppMarginSentence.appendChild(document.createTextNode(` in recoverable gross (${formatRand(netMin)}\u2013${formatRand(netMax)}/mo net after CBF\u2019s R6,000 flat fee) currently written off without a structured follow-up.`));
                 }
             }
 
